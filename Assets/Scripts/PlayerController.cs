@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (col.tag == "PowerUp")
 		{
+            Debug.Log("I am " + _playerIndex + " and I now have the powerup");
 			currPowerUp = col.GetComponent<APowerUp> ();
 			Destroy (col.gameObject);
 		}
@@ -46,8 +47,10 @@ public class PlayerController : MonoBehaviour
 
 	public void UsePowerUp(Direction d)
 	{
-		if (currPowerUp != null)
+        Debug.Log("i am _playerIndex " + _playerIndex);
+        if (currPowerUp != null)
 		{
+            Debug.Log("hello again _playerIndex " +_playerIndex);
 			currPowerUp.Use (d, _playerIndex);
 			if (currPowerUp.RemainingUsages <= 0)
 				currPowerUp = null;

@@ -13,59 +13,62 @@ public class GamepadInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        var index = playerCharacter.PlayerIndex;
 
         /////////////////////// AXES ////////////////////////////////
-	    if(Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftHorizontal") > 0)
+	    if(Input.GetAxis("P" + index + "LeftHorizontal") > 0)
         {
             //TODO
         }
-        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftHorizontal") < 0)
-        {
-            //TODO
-        }
-
-        if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftVertical") > 0)
-        {
-            //TODO
-        }
-        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftVertical") < 0)
+        else if (Input.GetAxis("P" + index + "LeftHorizontal") < 0)
         {
             //TODO
         }
 
-        if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightHorizontal") > 0)
+        if (Input.GetAxis("P" + index + "LeftVertical") > 0)
         {
             //TODO
         }
-        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightHorizontal") < 0)
+        else if (Input.GetAxis("P" + index + "LeftVertical") < 0)
         {
             //TODO
         }
 
-        if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightVertical") > 0)
+        if (Input.GetAxis("P" + index + "RightHorizontal") > 0)
         {
             //TODO
         }
-        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightVertical") < 0)
+        else if (Input.GetAxis("P" + index + "RightHorizontal") < 0)
+        {
+            //TODO
+        }
+
+        if (Input.GetAxis("P" + index + "RightVertical") > 0)
+        {
+            //TODO
+        }
+        else if (Input.GetAxis("P" + index + "RightVertical") < 0)
         {
             //TODO
         }
 
         //////////////////////// BUTTONS ///////////////////////////////
 
-        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonA"))
+        if (Input.GetButtonDown("P" + index + "ButtonA"))
         {
+            Debug.Log("P" + index + "ButtonA Hello!");
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.DOWN);
         }
-        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonB"))
+        if (Input.GetButtonDown("P" + index + "ButtonB"))
         {
+            Debug.Log("P" + index + "ButtonB Hello!");
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.RIGHT);
         }
-        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonX"))
+        if (Input.GetButtonDown("P" + index + "ButtonX"))
         {
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.LEFT);
         }
-        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonY"))
+        if (Input.GetButtonDown("P" + index + "ButtonY"))
         {
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.TOP);
         }

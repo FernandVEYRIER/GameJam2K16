@@ -26,7 +26,7 @@ public class GameManager : AGameManager {
 			GameObject go = (GameObject)Instantiate (playerPrefabs [i], spawnPoints [i].position, spawnPoints[i].rotation);
 			go.name = "Player" + (i + 1);
 			playerControllers [i] = go.GetComponent<PlayerController> ();
-			go.GetComponent<PlayerController> ().PlayerIndex = i + 1;
+			go.GetComponent<PlayerController> ().PlayerIndex = i;
 		}
 	}
 	
