@@ -90,6 +90,11 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &292341943 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010215527312, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
 --- !u!1 &389772402
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,9 +700,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000011618659556, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1213306477 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010527695622, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
+--- !u!114 &1213306479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1213306477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d651e787fedb38848a7e54e447b53b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sides:
+  - {fileID: 292341943}
+  - {fileID: 1636689880}
+  - {fileID: 2106672588}
+  - {fileID: 1318252967}
+  startDist: 150
+  velocity: 0.6
 --- !u!1 &1262289046
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +855,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1318252967 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012059594580, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
 --- !u!1 &1411017757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1072,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1636689880 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013985753980, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
 --- !u!1 &1640013846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,3 +1405,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2033246723}
+--- !u!1 &2106672588 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012531939084, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
