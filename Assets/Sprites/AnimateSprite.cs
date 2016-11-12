@@ -11,7 +11,10 @@ public class AnimateSprite : MonoBehaviour {
     }
 
     void Update () {
-        float offset = Time.time * scrollSpeed;
-        rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+		if (GameManager.GM.State == Assets.Scripts.GameState.PLAY)
+		{
+			float offset = Time.time * scrollSpeed;
+			rend.material.SetTextureOffset ("_MainTex", new Vector2 (offset, 0));
+		}
     }
 }

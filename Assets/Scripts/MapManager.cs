@@ -43,6 +43,7 @@ public class MapManager : MonoBehaviour {
 		{
 			if (currDelay <= 0)
 			{
+				Debug.Log ("Generate Map");
 				GenerateMap ();
 				currDelay = minSpawnDelay;
 			}
@@ -58,6 +59,7 @@ public class MapManager : MonoBehaviour {
 
 		foreach (MapGenerator m in spawners)
 		{
+			Debug.Log ("Wall ? " + isWall);
 			m.PushTerrain (new Obstacle((isWall) ? obstaclePrefab : null, distance));
 		}
 	}

@@ -17,7 +17,8 @@ public class MapGenerator : MonoBehaviour {
 	
 	private float distance = 0;
 	private List<Obstacle> terrainList = new List<Obstacle> ();
-	private float currVelocity = 1;
+	[SerializeField]private float currVelocity = 1;
+	private List<GameObject> _objects = new List<GameObject> ();
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,11 +29,15 @@ public class MapGenerator : MonoBehaviour {
 			{
 				if (terrainList[0].obstaclePrefab != null)
 				{
-					Instantiate (terrainList [0].obstaclePrefab, transform.position, transform.rotation);
+					_objects.Add((GameObject)Instantiate (terrainList [0].obstaclePrefab, transform.position, transform.rotation));
 				}
 				terrainList.RemoveAt (0);
 			}
 			distance += currVelocity;
+			foreach (GameObject g in _objects)
+			{
+				g.transform.position += g.transform.up * currVelocity;
+			}
 		}
 	
 	}
