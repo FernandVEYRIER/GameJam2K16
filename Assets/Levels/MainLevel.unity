@@ -249,6 +249,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasPause: {fileID: 1488521949}
   canvasGame: {fileID: 845535551}
+  playerPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnPoints: []
 --- !u!4 &1289182014
 Transform:
   m_ObjectHideFlags: 0
