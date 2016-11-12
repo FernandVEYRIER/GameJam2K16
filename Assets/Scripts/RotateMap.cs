@@ -5,13 +5,11 @@ public class RotateMap : MonoBehaviour {
 
     public float speed = 1f;
     public enum State { none, right, left };
-    private Queue<State> queue = new Queue<State>();
     private static readonly Quaternion[] rotations = {
         Quaternion.AngleAxis(0, Vector3.forward),
         Quaternion.AngleAxis(90, Vector3.forward),
         Quaternion.AngleAxis(-90, Vector3.forward)
     };
-    private bool invert = false;
     private State status;
 
     private Quaternion targetRotation;
