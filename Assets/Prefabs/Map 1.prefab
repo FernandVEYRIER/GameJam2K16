@@ -52,6 +52,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011349088244}
+  - 114: {fileID: 114000011618659556}
   m_Layer: 0
   m_Name: Map 1
   m_TagString: Untagged
@@ -339,6 +340,24 @@ BoxCollider2D:
   m_Offset: {x: 7.26506, y: 0.08742905}
   serializedVersion: 2
   m_Size: {x: 3.4560292, y: 9.780661}
+--- !u!114 &114000011618659556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010527695622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d651e787fedb38848a7e54e447b53b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sides:
+  - {fileID: 1000012531939084}
+  - {fileID: 1000013985753980}
+  - {fileID: 1000012059594580}
+  - {fileID: 1000010215527312}
+  startDist: 150
+  velocity: 0.6
 --- !u!212 &212000011254733022
 SpriteRenderer:
   m_ObjectHideFlags: 1

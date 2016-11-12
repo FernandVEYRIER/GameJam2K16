@@ -19,7 +19,7 @@ public class MapManager : MonoBehaviour {
 			for (int i = 0; i < sides.Length; ++i)
 			{
 				tr [i] = sides [i].transform.position;
-				sides [i].transform.position += sides [i].transform.up * startDist;
+				sides [i].transform.position += sides [i].transform.right * startDist;
 			}
 		}
 	}
