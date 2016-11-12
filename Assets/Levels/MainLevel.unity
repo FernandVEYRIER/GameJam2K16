@@ -729,7 +729,8 @@ MonoBehaviour:
   - {fileID: 1202423365}
   - {fileID: 1695959015}
   - {fileID: 2054049296}
-  startDist: 100
+  startDist: 150
+  velocity: 0.6
 --- !u!1 &1262289046
 GameObject:
   m_ObjectHideFlags: 0
