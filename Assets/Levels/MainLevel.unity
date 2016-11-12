@@ -441,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasPause: {fileID: 1488521949}
   canvasGame: {fileID: 845535551}
+  textCounter: {fileID: 2033246725}
   playerPrefabs:
   - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
   - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
