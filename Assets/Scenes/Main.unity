@@ -100,7 +100,7 @@ GameObject:
   - 4: {fileID: 28551209}
   - 212: {fileID: 28551210}
   m_Layer: 0
-  m_Name: red
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 199700515}
   - 61: {fileID: 199700517}
-  - 114: {fileID: 199700516}
   m_Layer: 0
   m_Name: Destucteur
   m_TagString: Untagged
@@ -182,17 +181,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1125543407}
   m_RootOrder: 4
---- !u!114 &199700516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 199700514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d7e272872d77a44a9c5697610822dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &199700517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,7 +205,7 @@ GameObject:
   - 4: {fileID: 218363616}
   - 212: {fileID: 218363617}
   m_Layer: 0
-  m_Name: green
+  m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +267,7 @@ GameObject:
   - 4: {fileID: 328316197}
   - 212: {fileID: 328316198}
   m_Layer: 0
-  m_Name: orange
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -575,6 +563,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1654764788}
   - 61: {fileID: 1654764789}
+  - 114: {fileID: 1654764790}
   m_Layer: 0
   m_Name: Destucteur (3)
   m_TagString: Untagged
@@ -609,6 +598,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &1654764790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654764787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d7e272872d77a44a9c5697610822dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2106233740
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ GameObject:
   - 4: {fileID: 2106233741}
   - 212: {fileID: 2106233742}
   m_Layer: 0
-  m_Name: blue
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
