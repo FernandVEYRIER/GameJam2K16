@@ -39,4 +39,20 @@ public class GameManager : AGameManager {
 	{
 		Debug.Log ("NOT IMPLEMENTED rotate Map");
 	}
+
+    public void GiveShield(Direction d, int sender)
+    {
+        int target = GetPlayerIndexFromDirection(d);
+        playerControllers[target].hasShield = true;  
+    }
+
+    public int GetPlayerIndexFromDirection(Direction d)
+    {
+        for (int i = 0; i < playerControllers.Length; i++)
+        {
+            if (playerControllers[i].Position == d)
+                return i;
+        }
+        return -1; //let us hope that this never happens
+    }
 }

@@ -5,10 +5,11 @@ using Assets.Scripts;
 
 public class PlayerController : MonoBehaviour
 {
-	private int _playerIndex = -1;
-    private Direction position;
-	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
+    public bool hasShield = false;
 
+	private int _playerIndex = -1;
+    private Direction _position;
+	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
 	private IPowerUp currPowerUp = null;
 
     public void shiftMoves(int shiftBy, bool counterClockwise = false)
@@ -68,4 +69,10 @@ public class PlayerController : MonoBehaviour
 		get { return _playerIndex; }
 		set { _playerIndex = (_playerIndex < 0) ? value : _playerIndex; }
 	}
+
+    public Direction Position
+    {
+        get { return _position; }
+        set { _position = value; }
+    }
 }
