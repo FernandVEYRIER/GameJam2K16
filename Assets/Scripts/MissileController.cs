@@ -1,30 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public class MissileController : MonoBehaviour {
 
-	private int targetID = -1;
+	private Direction targetDir = Direction.TOP;
 	public float speed = 10;
-
-	private Transform currTarget;
 
 	// Use this for initialization
 	void Start () {
-		currTarget = GameObject.Find ("Player" + targetID).transform;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		transform.position = Vector3.MoveTowards (transform.position, currTarget.position, speed);
+		transform.Translate (transform.forward * speed);
 	}
 
-	public bool UpdateTarget(int id)
+	public bool UpdateTarget(Direction dir)
 	{
-		GameObject go = GameObject.Find ("Player" + id);
-		if (go == null)
-			return false;
-		currTarget = go.transform;
+		targetDir = dir;
 		return true;
 	}
 }
