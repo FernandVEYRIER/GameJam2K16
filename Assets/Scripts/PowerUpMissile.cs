@@ -11,7 +11,9 @@ public class PowerUpMissile : APowerUp {
 		if (base.Use())
 		{
 			Instantiate (missilePrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
-			return true;
+            ((GameManager)GameManager.GM).AS.PlayOneShot(((GameManager)GameManager.GM).missileSound);
+
+            return true;
 		}
 		return false;
 	}

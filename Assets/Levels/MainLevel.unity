@@ -828,6 +828,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8611cbe4b74169d41943ab35e848d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AS: {fileID: 0}
+  shieldSound: {fileID: 8300000, guid: b441c28ec4022db49ace9df5b203e592, type: 3}
+  reflectorSound: {fileID: 8300000, guid: 86e730c7e1b834847b1279bb4e728ec8, type: 3}
+  reflectedSound: {fileID: 8300000, guid: ea19270d977d0534f843bb67e2416cd7, type: 3}
+  rotationSound: {fileID: 8300000, guid: 990a324120a3f734593886330b6c6338, type: 3}
+  missileSound: {fileID: 8300000, guid: cbdcc27611f431f4dbc65ffa38095611, type: 3}
   canvasPause: {fileID: 1488521949}
   canvasGame: {fileID: 845535551}
   textCounter: {fileID: 2033246725}

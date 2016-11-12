@@ -12,6 +12,8 @@ namespace Assets.Scripts
             if (base.Use(dir, sender, target))
             {
                 ((GameManager)GameManager.GM).GiveShield(dir, sender);
+                ((GameManager)GameManager.GM).AS.PlayOneShot(((GameManager)GameManager.GM).shieldSound);
+
                 return true;
             }
             return false;

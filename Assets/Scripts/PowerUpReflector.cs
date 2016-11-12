@@ -8,5 +8,8 @@ namespace Assets.Scripts
     class PowerUpReflector: APowerUp
     {
         //TODO
+        
+        //((GameManager)GameManager.GM).AS.PlayOneShot(((GameManager)GameManager.GM).reflectorSound);
+            
     }
 }
