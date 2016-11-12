@@ -9,7 +9,8 @@ public class PowerUpRotate : APowerUp {
 		if (base.Use(dir, sender, target))
 		{
 			((GameManager)GameManager.GM).RotateMap (dir == Direction.RIGHT);
-			return true;
+            ((GameManager)GameManager.GM).AS.PlayOneShot(((GameManager)GameManager.GM).rotationSound);
+            return true;
 		}
 		return false;
 	}

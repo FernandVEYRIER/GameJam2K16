@@ -5,7 +5,14 @@ using UnityEngine.UI;
 
 public class GameManager : AGameManager {
 
-	[Header("GUI")]
+    public AudioSource AS = new AudioSource();
+    public AudioClip shieldSound;
+    public AudioClip reflectorSound;
+    public AudioClip reflectedSound;
+    public AudioClip rotationSound;
+    public AudioClip missileSound;
+
+    [Header("GUI")]
 	[SerializeField] private GameObject canvasPause;
 	[SerializeField] private GameObject canvasGame;
 	[SerializeField] private Text textCounter;
@@ -18,10 +25,11 @@ public class GameManager : AGameManager {
 	[SerializeField] private RotateMap map;
 
 	private PlayerController[] playerControllers = new PlayerController[Constants.NB_MAX_PLAYERS];
-
+    
 	// Use this for initialization
 	override public void Start ()
 	{
+        AS = GetComponent<AudioSource>();
 		canvasGame.SetActive (true);
 		canvasPause.SetActive (false);
 		base.Start ();
