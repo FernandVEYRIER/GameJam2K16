@@ -22,6 +22,7 @@ public class GameManager : AGameManager {
 		{
 			GameObject go = (GameObject)Instantiate (playerPrefabs [i], spawnPoints [i].position, spawnPoints[i].rotation);
 			go.GetComponent<PlayerCharacter> ().PlayerIndex = i + 1;
+			go.GetComponent<PlayerCharacter> ().shiftMoves (i, true);
 		}
 	}
 	

@@ -10,22 +10,23 @@ public class PlayerCharacter : MonoBehaviour
 
     void Start()
     {
-        if(gameObject.transform.eulerAngles.z == 0)
-        {
-            _moves = new List<string> { "Up", "Right", "Down", "Left" };
-        }
-        else if (gameObject.transform.eulerAngles.z == 90)
-        {
-            _moves = new List<string> { "Right", "Down", "Left", "Up" };
-        }
-        else if (gameObject.transform.eulerAngles.z == 180)
-        {
-            _moves = new List<string> { "Down", "Left", "Up", "Right" };
-        }
-        else if (gameObject.transform.eulerAngles.z == 260)
-        {
-            _moves = new List<string> { "Left", "Up", "Right", "Down" };
-        }
+		_moves = new List<string> { "Up", "Right", "Down", "Left" };
+//		if(InRange(gameObject.transform.eulerAngles.z, -5, 5))
+//        {
+//            _moves = new List<string> { "Up", "Right", "Down", "Left" };
+//        }
+//        else if (gameObject.transform.eulerAngles.z == 90)
+//        {
+//            _moves = new List<string> { "Right", "Down", "Left", "Up" };
+//        }
+//        else if (gameObject.transform.eulerAngles.z == 180)
+//        {
+//            _moves = new List<string> { "Down", "Left", "Up", "Right" };
+//        }
+//        else if (gameObject.transform.eulerAngles.z == 270)
+//        {
+//            _moves = new List<string> { "Left", "Up", "Right", "Down" };
+//        }
     }
 
     public void shiftMoves(int shiftBy, bool counterClockwise = false)
