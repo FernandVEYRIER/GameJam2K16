@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
 		if (col.tag == "PowerUp")
 		{
 			currPowerUp = col.GetComponent<APowerUp> ();
+			Destroy (col.gameObject);
 		}
 	}
 
