@@ -5,6 +5,7 @@ using Assets.Scripts;
 public class MissileController : MonoBehaviour {
 
 	public float speed = 10;
+	Direction currentDir = Direction.TOP;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,15 @@ public class MissileController : MonoBehaviour {
 			transform.localRotation = Quaternion.Euler (0, 0, 90);
 			break;
 		}
+		currentDir = dir;
 		return true;
+	}
+
+	public void InvertTarget()
+	{
+		int curr = (int)currentDir;
+
+		curr *= -1;
+		UpdateTarget ((Direction)curr);
 	}
 }

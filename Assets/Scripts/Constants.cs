@@ -12,10 +12,10 @@ namespace Assets.Scripts
 
 	public enum Direction
 	{
-		TOP,
-		LEFT,
-		DOWN,
-		RIGHT
+		TOP = 2,
+		LEFT = 1,
+		DOWN = -2,
+		RIGHT = -1
 	}
 
 	public enum GameState
