@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
 			currPowerUp = col.GetComponent<APowerUp> ();
 			Destroy (col.gameObject);
 		}
+		else if (col.tag == "Obstacle")
+		{
+			Debug.Log ("Player " + PlayerIndex + " boom");
+		}
 	}
 
 	public void UsePowerUp(Direction d)

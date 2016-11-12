@@ -4,13 +4,16 @@ using Assets.Scripts;
 
 public class MapManager : MonoBehaviour {
 
+	[Header("Terrain")]
 	[SerializeField] private GameObject[] sides;
 	[SerializeField] private MapGenerator[] spawners;
 	[SerializeField] private float startDist;
 	[SerializeField] private float velocity;
 
+	[Header("Objects")]
 	[SerializeField] private float minSpawnDelay = 2f;
 	[SerializeField] private GameObject obstaclePrefab;
+	[SerializeField] private GameObject[] powerupPrefabs;
 
 	private Vector3[] tr;
 	private Vector3[] vel;
@@ -60,7 +63,7 @@ public class MapManager : MonoBehaviour {
 		foreach (MapGenerator m in spawners)
 		{
 			Debug.Log ("Wall ? " + isWall);
-			m.PushTerrain (new Obstacle((isWall) ? obstaclePrefab : null, distance));
+			m.PushTerrain (new Obstacle((isWall) ? obstaclePrefab : powerupPrefabs[Random.Range(0, powerupPrefabs.Length)], distance));
 		}
 	}
 }
