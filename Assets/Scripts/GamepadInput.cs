@@ -15,57 +15,57 @@ public class GamepadInput : MonoBehaviour {
 	void Update () {
 
         /////////////////////// AXES ////////////////////////////////
-	    if(Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "LeftHorizontal") > 0)
+	    if(Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftHorizontal") > 0)
         {
             //TODO
         }
-        else if (Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "LeftHorizontal") < 0)
-        {
-            //TODO
-        }
-
-        if (Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "LeftVertical") > 0)
-        {
-            //TODO
-        }
-        else if (Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "LeftVertical") < 0)
+        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftHorizontal") < 0)
         {
             //TODO
         }
 
-        if (Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "RightHorizontal") > 0)
+        if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftVertical") > 0)
         {
             //TODO
         }
-        else if (Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "RightHorizontal") < 0)
+        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "LeftVertical") < 0)
         {
             //TODO
         }
 
-        if (Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "RightVertical") > 0)
+        if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightHorizontal") > 0)
         {
             //TODO
         }
-        else if (Input.GetAxis("P" + playerCharacter.playerIndex + 1 + "RightVertical") < 0)
+        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightHorizontal") < 0)
+        {
+            //TODO
+        }
+
+        if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightVertical") > 0)
+        {
+            //TODO
+        }
+        else if (Input.GetAxis("P" + playerCharacter.PlayerIndex + "RightVertical") < 0)
         {
             //TODO
         }
 
         //////////////////////// BUTTONS ///////////////////////////////
 
-        if (Input.GetButtonDown("P" + playerCharacter.playerIndex + 1 + "ButtonA"))
+        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonA"))
         {
             //TODO
         }
-        if (Input.GetButtonDown("P" + playerCharacter.playerIndex + 1 + "ButtonB"))
+        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonB"))
         {
             //TODO
         }
-        if (Input.GetButtonDown("P" + playerCharacter.playerIndex + 1 + "ButtonX"))
+        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonX"))
         {
             //TODO
         }
-        if (Input.GetButtonDown("P" + playerCharacter.playerIndex + 1 + "ButtonY"))
+        if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonY"))
         {
             //TODO
         }

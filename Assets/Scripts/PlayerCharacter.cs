@@ -3,12 +3,11 @@ using System.Collections;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public int playerIndex;
+	[SerializeField] private int _playerIndex = -1;
 
-    public PlayerCharacter(int p)
-    {
-        this.playerIndex = p;
-    }
-
-
+	public int PlayerIndex
+	{
+		get { return _playerIndex; }
+		set { _playerIndex = (_playerIndex < 0) ? value : _playerIndex; }
+	}
 }
