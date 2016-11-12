@@ -72,5 +72,9 @@ public class GamepadInput : MonoBehaviour {
         {
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.TOP);
         }
+        if (Input.GetButtonDown("P0ButtonPause"))
+        {
+            //TODO
+        }
     }
 }
