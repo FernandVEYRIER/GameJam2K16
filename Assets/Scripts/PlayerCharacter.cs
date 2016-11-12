@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerCharacter : MonoBehaviour
 {
-	[SerializeField] private int _playerIndex = -1;
+	private int _playerIndex = -1;
 
 	public int PlayerIndex
 	{
