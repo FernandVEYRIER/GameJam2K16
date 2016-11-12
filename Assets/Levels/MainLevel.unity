@@ -250,10 +250,10 @@ MonoBehaviour:
   canvasPause: {fileID: 1488521949}
   canvasGame: {fileID: 845535551}
   playerPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
+  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
+  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
+  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
   spawnPoints: []
 --- !u!4 &1289182014
 Transform:
