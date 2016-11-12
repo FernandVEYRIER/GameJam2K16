@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts;
+using UnityEngine.UI;
 
 public class GameManager : AGameManager {
 
 	[Header("GUI")]
 	[SerializeField] private GameObject canvasPause;
 	[SerializeField] private GameObject canvasGame;
+	[SerializeField] private Text textCounter;
 
 	[Header("Player")]
 	[SerializeField] private GameObject[] playerPrefabs;
@@ -28,6 +30,20 @@ public class GameManager : AGameManager {
 			playerControllers [i] = go.GetComponent<PlayerController> ();
 			go.GetComponent<PlayerController> ().PlayerIndex = i;
 		}
+
+		StartCoroutine (GameStartRoutine ());
+	}
+
+	IEnumerator GameStartRoutine()
+	{
+		UpdateState (GameState.WARMUP);
+		for (int i = 3; i > 0; --i)
+		{
+			textCounter.text = i.ToString();
+			yield return new WaitForSeconds (1);
+		}
+		textCounter.text = "";
+		UpdateState (GameState.PLAY);
 	}
 	
 	override public void SetPause()

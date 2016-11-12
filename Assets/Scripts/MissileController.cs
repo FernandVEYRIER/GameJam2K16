@@ -4,7 +4,6 @@ using Assets.Scripts;
 
 public class MissileController : MonoBehaviour {
 
-	private Direction targetDir = Direction.TOP;
 	public float speed = 10;
 
 	// Use this for initialization
@@ -14,12 +13,26 @@ public class MissileController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		transform.Translate (transform.forward * speed);
+		transform.position += transform.up * speed * Time.deltaTime;
 	}
 
 	public bool UpdateTarget(Direction dir)
 	{
-		targetDir = dir;
+		switch (dir)
+		{
+		case Direction.TOP:
+			transform.localRotation = Quaternion.Euler (0, 0, 0);
+			break;
+		case Direction.DOWN:
+			transform.localRotation = Quaternion.Euler(0, 0, 180);
+			break;
+		case Direction.LEFT:
+			transform.localRotation = Quaternion.Euler (0, 0, 270);
+			break;
+		case Direction.RIGHT:
+			transform.localRotation = Quaternion.Euler (0, 0, 90);
+			break;
+		}
 		return true;
 	}
 }

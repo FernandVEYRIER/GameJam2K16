@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Assets.Scripts;
 
 public abstract class AGameManager : MonoBehaviour {
 	
 	private bool _paused = false;
+	private GameState _gameState = GameState.WARMUP;
+	private GameState _prevGameState = GameState.WARMUP;
 
 	private static AGameManager _gm = null;
 
 	public static AGameManager GM
 	{ get { return _gm; }}
+
+	public GameState State
+	{ get { return _gameState; }}
 
 	virtual public void Awake()
 	{
@@ -21,6 +27,12 @@ public abstract class AGameManager : MonoBehaviour {
 		{
 			Destroy (this);
 		}
+	}
+
+	virtual protected void UpdateState(GameState state)
+	{
+		_prevGameState = _gameState;
+		_gameState = state;
 	}
 
 	virtual public void Start()
@@ -41,6 +53,12 @@ public abstract class AGameManager : MonoBehaviour {
 	virtual public void SetPause()
 	{
 		_paused = !_paused;
+		if (_paused)
+			UpdateState (GameState.PAUSE);
+		else
+			UpdateState (_prevGameState);
+		
+		Time.timeScale = (_paused) ? 0 : 1;
 	}
 
 	virtual public void OnPlay()
