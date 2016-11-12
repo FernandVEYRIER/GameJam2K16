@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 
 public class PlayerController : MonoBehaviour
 {
-	private int _playerIndex = -1;
-	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
+    public bool hasShield = false;
 
+	private int _playerIndex = -1;
+    private Direction _position;
+	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
 	private IPowerUp currPowerUp = null;
 
     public void shiftMoves(int shiftBy, bool counterClockwise = false)
@@ -36,23 +39,43 @@ public class PlayerController : MonoBehaviour
 	{
 		if (col.tag == "PowerUp")
 		{
+            Debug.Log("I am " + _playerIndex + " and I now have the powerup");
 			currPowerUp = col.GetComponent<APowerUp> ();
+			Destroy (col.gameObject);
 		}
 	}
 
-	public void UsePowerUp()
+	public void UsePowerUp(Direction d)
 	{
-		if (currPowerUp != null)
+        Debug.Log("i am _playerIndex " + _playerIndex);
+        if (currPowerUp != null)
 		{
-			currPowerUp.Use ();
+            Debug.Log("hello again _playerIndex " +_playerIndex);
+			currPowerUp.Use (d, _playerIndex);
 			if (currPowerUp.RemainingUsages <= 0)
 				currPowerUp = null;
 		}
 	}
+
+    public void TakeDamage()
+    {
+        //TODO
+    }
+
+    public void DodgeObstacle()
+    {
+        //TODO
+    }
 
 	public int PlayerIndex
 	{
 		get { return _playerIndex; }
 		set { _playerIndex = (_playerIndex < 0) ? value : _playerIndex; }
 	}
+
+    public Direction Position
+    {
+        get { return _position; }
+        set { _position = value; }
+    }
 }
