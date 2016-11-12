@@ -11,7 +11,7 @@ public class PowerUpMissile : APowerUp {
 		if (base.Use())
 		{
 			GameObject go = (GameObject)Instantiate (missilePrefab, transform.position, transform.rotation);
-			go.GetComponent<MissileController> ().targetID = target;
+			go.GetComponent<MissileController> ().UpdateTarget(target);
 			return true;
 		}
 		return false;

@@ -58,7 +58,9 @@
      <Compile Include="Assets\Scripts\MissileController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PowerUpMissile.cs" />
+     <Compile Include="Assets\Scripts\PowerUpReflector.cs" />
      <Compile Include="Assets\Scripts\PowerUpRotate.cs" />
+     <Compile Include="Assets\Scripts\PowerUpShield.cs" />
      <Compile Include="Assets\Scripts\RotateMap.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

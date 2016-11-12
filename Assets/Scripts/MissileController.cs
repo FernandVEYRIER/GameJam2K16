@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MissileController : MonoBehaviour {
 
-	[HideInInspector] public int targetID = -1;
+	private int targetID = -1;
 	public float speed = 10;
 
 	private Transform currTarget;
@@ -19,7 +19,7 @@ public class MissileController : MonoBehaviour {
 		transform.position = Vector3.MoveTowards (transform.position, currTarget.position, speed);
 	}
 
-	bool UpdateTarget(int id)
+	public bool UpdateTarget(int id)
 	{
 		GameObject go = GameObject.Find ("Player" + id);
 		if (go == null)
