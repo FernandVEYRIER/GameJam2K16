@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
-public class PlayerCharacter : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 	private int _playerIndex = -1;
-    private List<string> _moves = new List<string> { "Up", "Right", "Down", "Left" };
+	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
 
     public void shiftMoves(int shiftBy, bool counterClockwise = false)
     {
@@ -28,7 +27,9 @@ public class PlayerCharacter : MonoBehaviour
                 _moves[_moves.Count - 1] = tmp;
             }
         }
-    }
+		foreach (var v in _moves)
+			Debug.Log (v);
+	}
 
 	public int PlayerIndex
 	{

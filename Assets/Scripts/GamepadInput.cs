@@ -4,7 +4,7 @@ using System.Collections;
 public class GamepadInput : MonoBehaviour {
 
     [SerializeField]
-    PlayerCharacter playerCharacter;
+	PlayerController playerCharacter;
 
 	// Use this for initialization
 	void Start () {
