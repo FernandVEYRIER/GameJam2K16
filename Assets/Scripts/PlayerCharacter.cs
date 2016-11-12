@@ -6,42 +6,27 @@ using System.Linq;
 public class PlayerCharacter : MonoBehaviour
 {
 	private int _playerIndex = -1;
-    private List<string> _moves = new List<string>();
-
-    void Start()
-    {
-		_moves = new List<string> { "Up", "Right", "Down", "Left" };
-//		if(InRange(gameObject.transform.eulerAngles.z, -5, 5))
-//        {
-//            _moves = new List<string> { "Up", "Right", "Down", "Left" };
-//        }
-//        else if (gameObject.transform.eulerAngles.z == 90)
-//        {
-//            _moves = new List<string> { "Right", "Down", "Left", "Up" };
-//        }
-//        else if (gameObject.transform.eulerAngles.z == 180)
-//        {
-//            _moves = new List<string> { "Down", "Left", "Up", "Right" };
-//        }
-//        else if (gameObject.transform.eulerAngles.z == 270)
-//        {
-//            _moves = new List<string> { "Left", "Up", "Right", "Down" };
-//        }
-    }
+    private List<string> _moves = new List<string> { "Up", "Right", "Down", "Left" };
 
     public void shiftMoves(int shiftBy, bool counterClockwise = false)
     {
         if (counterClockwise)
         {
-            var result = _moves.GetRange(_moves.Count - shiftBy, shiftBy);
-            result.AddRange(_moves.GetRange(0, _moves.Count - shiftBy));
-            _moves = result;
+            for (int i = 0; i < shiftBy; i++)
+            {
+                var tmp = _moves[_moves.Count - 1];
+                _moves[_moves.Count - 1] = _moves[0];
+                _moves[0] = tmp;
+            }
         }
         else
         {
-            var result = _moves.GetRange(shiftBy, _moves.Count - shiftBy);
-            result.AddRange(_moves.GetRange(0, shiftBy));
-            _moves = result;
+            for (int i = 0; i < shiftBy; i++)
+            {
+                var tmp = _moves[0];
+                _moves[0] = _moves[_moves.Count - 1];
+                _moves[_moves.Count - 1] = tmp;
+            }
         }
     }
 
