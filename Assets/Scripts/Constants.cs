@@ -9,4 +9,12 @@ namespace Assets.Scripts
     {
         public static int NB_MAX_PLAYERS = 4;
     }
+
+	public enum Direction
+	{
+		TOP,
+		LEFT,
+		DOWN,
+		RIGHT
+	}
 }

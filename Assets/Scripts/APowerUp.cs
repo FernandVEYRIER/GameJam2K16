@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public abstract class APowerUp : MonoBehaviour, IPowerUp {
 
@@ -25,7 +26,7 @@ public abstract class APowerUp : MonoBehaviour, IPowerUp {
 		}
 	}
 
-	virtual public bool Use (int sender = -1, int target = -1)
+	virtual public bool Use (Direction dir = Direction.TOP, int sender = -1, int target = -1)
 	{
 		_sender = sender;
 		_target = target;

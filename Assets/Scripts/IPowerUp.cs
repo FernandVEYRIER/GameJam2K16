@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public interface IPowerUp {
 
@@ -17,6 +18,6 @@ public interface IPowerUp {
 		set;
 	}
 
-	bool Use (int sender = -1, int target = -1);
+	bool Use (Direction dir = Direction.TOP, int sender = -1, int target = -1);
 	void Add ();
 }
