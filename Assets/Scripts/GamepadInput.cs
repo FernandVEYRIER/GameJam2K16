@@ -10,13 +10,14 @@ public class GamepadInput : MonoBehaviour {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         var index = playerCharacter.PlayerIndex;
 
         /////////////////////// AXES ////////////////////////////////
-	    if(Input.GetAxis("P" + index + "LeftHorizontal") > 0)
+        if (Input.GetAxis("P" + index + "LeftHorizontal") > 0)
         {
             //TODO
         }
@@ -72,9 +73,10 @@ public class GamepadInput : MonoBehaviour {
         {
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.TOP);
         }
-        if (Input.GetButtonDown("P0ButtonPause"))
+        if (Input.GetButtonDown("P" + index + "ButtonPause"))
         {
-            //TODO
+            Debug.Log("GamePAuse");
+            GameManager.GM.SetPause();
         }
     }
 }
