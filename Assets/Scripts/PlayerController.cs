@@ -11,20 +11,21 @@ public class PlayerController : MonoBehaviour
     {
         if (counterClockwise)
         {
-            for (int i = 0; i < shiftBy; i++)
+            if (_moves.Count > shiftBy)
             {
-                var tmp = _moves[_moves.Count - 1];
-                _moves[_moves.Count - 1] = _moves[0];
-                _moves[0] = tmp;
+                var result = _moves.GetRange(_moves.Count - shiftBy, shiftBy);
+                result.AddRange(_moves.GetRange(0, _moves.Count - shiftBy));
+                _moves = result;
             }
+
         }
         else
         {
-            for (int i = 0; i < shiftBy; i++)
+            if (_moves.Count > shiftBy)
             {
-                var tmp = _moves[0];
-                _moves[0] = _moves[_moves.Count - 1];
-                _moves[_moves.Count - 1] = tmp;
+                var result = _moves.GetRange(shiftBy, _moves.Count - shiftBy);
+                result.AddRange(_moves.GetRange(0, shiftBy));
+                _moves = result;
             }
         }
 		foreach (var v in _moves)
