@@ -7,6 +7,16 @@ public interface IPowerUp {
 		get;
 	}
 
-	bool Use ();
+	int Sender {
+		get;
+		set;
+	}
+
+	int Target {
+		get;
+		set;
+	}
+
+	bool Use (int sender = -1, int target = -1);
 	void Add ();
 }

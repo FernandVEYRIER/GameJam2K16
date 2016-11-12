@@ -8,7 +8,7 @@ public abstract class AGameManager : MonoBehaviour {
 
 	private static AGameManager _gm = null;
 
-	public AGameManager GM
+	public static AGameManager GM
 	{ get { return _gm; }}
 
 	virtual public void Awake()

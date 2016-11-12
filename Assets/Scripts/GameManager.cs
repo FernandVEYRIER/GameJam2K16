@@ -35,11 +35,8 @@ public class GameManager : AGameManager {
 		canvasPause.SetActive (Paused);
 	}
 
-	override public void Update()
+	public void RotateMap(bool clockwise = true)
 	{
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			playerControllers [0].GetComponent<PlayerController> ().shiftMoves (1);
-		}
+		Debug.Log ("NOT IMPLEMENTED rotate Map");
 	}
 }

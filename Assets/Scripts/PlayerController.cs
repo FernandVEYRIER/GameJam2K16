@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 	private int _playerIndex = -1;
 	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
 
+	private IPowerUp currPowerUp = null;
+
     public void shiftMoves(int shiftBy, bool counterClockwise = false)
     {
         if (counterClockwise)
@@ -28,8 +30,24 @@ public class PlayerController : MonoBehaviour
                 _moves = result;
             }
         }
-		foreach (var v in _moves)
-			Debug.Log (v);
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.tag == "PowerUp")
+		{
+			currPowerUp = col.GetComponent<APowerUp> ();
+		}
+	}
+
+	public void UsePowerUp()
+	{
+		if (currPowerUp != null)
+		{
+			currPowerUp.Use ();
+			if (currPowerUp.RemainingUsages <= 0)
+				currPowerUp = null;
+		}
 	}
 
 	public int PlayerIndex
