@@ -8,8 +8,8 @@ public class HandleGui : MonoBehaviour {
 	void Update ()
     {
         if (Input.GetAxis("Horizontal") < 0)
-            map.rotate(RotateMap.State.right);
-        else if (Input.GetAxis("Horizontal") > 0)
             map.rotate(RotateMap.State.left);
+        else if (Input.GetAxis("Horizontal") > 0)
+            map.rotate(RotateMap.State.right);
     }
 }
