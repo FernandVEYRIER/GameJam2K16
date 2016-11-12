@@ -4,16 +4,14 @@ using System.Collections.Generic;
 public class RotateMap : MonoBehaviour {
 
     public float speed = 1f;
-    public enum State { none, right, left, left180, right180, left270, right270, left360, right360 };
+    public enum State { none, right, left };
     private Queue<State> queue = new Queue<State>();
     private static readonly Quaternion[] rotations = {
         Quaternion.AngleAxis(0, Vector3.forward),
         Quaternion.AngleAxis(90, Vector3.forward),
-        Quaternion.AngleAxis(-90, Vector3.forward),
-            Quaternion.AngleAxis(180, Vector3.forward),
-        Quaternion.AngleAxis(-180, Vector3.forward)
+        Quaternion.AngleAxis(-90, Vector3.forward)
     };
-    
+    private bool invert = false;
     private State status;
 
     private Quaternion targetRotation;
@@ -26,18 +24,6 @@ public class RotateMap : MonoBehaviour {
     {
         if (transform.rotation == targetRotation)
         {
-            if (State.right180 == st)
-            {
-                queue.Enqueue(State.right);
-                queue.Enqueue(State.right);
-            }
-            else if (State.left180 == st)
-            {
-                queue.Enqueue(State.left);
-                queue.Enqueue(State.left);
-            }
-            else
-                queue.Enqueue(st);
             status = st;
         }
     }
@@ -45,12 +31,11 @@ public class RotateMap : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (transform.rotation == targetRotation && queue.Count != 0)
+        if (State.none != status)
         {
-            targetRotation *= rotations[(int)queue.Peek()];
-            queue.Dequeue();
+            targetRotation *= rotations[(int)status];
             status = State.none;
         }
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10 * speed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 30 * Time.deltaTime);
     }
 }
