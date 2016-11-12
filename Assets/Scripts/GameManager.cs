@@ -14,6 +14,9 @@ public class GameManager : AGameManager {
 	[SerializeField] private GameObject[] playerPrefabs;
 	[SerializeField] private Transform[] spawnPoints;
 
+	[Header("Map")]
+	[SerializeField] private RotateMap map;
+
 	private PlayerController[] playerControllers = new PlayerController[Constants.NB_MAX_PLAYERS];
 
 	// Use this for initialization
@@ -54,13 +57,13 @@ public class GameManager : AGameManager {
 
 	public void RotateMap(bool clockwise = true)
 	{
-		Debug.Log ("NOT IMPLEMENTED rotate Map");
+		map.rotate ((clockwise) ? global::RotateMap.State.right : global::RotateMap.State.left);
 	}
 
     public void GiveShield(Direction d, int sender)
     {
         int target = GetPlayerIndexFromDirection(d);
-        playerControllers[target].hasShield = true;  
+        playerControllers[target].hasShield = true;
     }
 
     public int GetPlayerIndexFromDirection(Direction d)

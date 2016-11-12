@@ -10,7 +10,7 @@ public class PowerUpMissile : APowerUp {
 	{
 		if (base.Use())
 		{
-			Instantiate (missilePrefab, transform.position, transform.rotation);
+			Instantiate (missilePrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
 			return true;
 		}
 		return false;
