@@ -90,6 +90,11 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &292341943 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010215527312, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
 --- !u!1 &389772402
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +703,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1202423365 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013498691556, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
+--- !u!1 &1213306477 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010527695622, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
+--- !u!114 &1213306479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1213306477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d651e787fedb38848a7e54e447b53b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sides:
+  - {fileID: 292341943}
+  - {fileID: 1202423365}
+  - {fileID: 1695959015}
+  - {fileID: 2054049296}
+  startDist: 100
 --- !u!1 &1262289046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1192,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1695959015 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012226743112, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
 --- !u!1 &1807142314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,3 +1403,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2033246723}
+--- !u!1 &2054049296 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010902271356, guid: ca9d9d4f564b45e43885b3a663671bdb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1134386384}
