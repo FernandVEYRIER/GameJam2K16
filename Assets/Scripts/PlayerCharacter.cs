@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class PlayerCharacter : MonoBehaviour
 {
-	[SerializeField] private int _playerIndex = -1;
+	private int _playerIndex = -1;
     private List<string> _moves = new List<string>();
 
     void Start()
