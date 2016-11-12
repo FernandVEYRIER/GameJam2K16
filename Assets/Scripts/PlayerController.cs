@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 
 public class PlayerController : MonoBehaviour
 {
 	private int _playerIndex = -1;
+    private Direction position;
 	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
 
 	private IPowerUp currPowerUp = null;
@@ -41,15 +43,20 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-	public void UsePowerUp()
+	public void UsePowerUp(Direction d)
 	{
 		if (currPowerUp != null)
 		{
-			currPowerUp.Use ();
+			currPowerUp.Use (d, _playerIndex);
 			if (currPowerUp.RemainingUsages <= 0)
 				currPowerUp = null;
 		}
 	}
+
+    public void DodgeObstacle()
+    {
+        //TODO
+    }
 
 	public int PlayerIndex
 	{

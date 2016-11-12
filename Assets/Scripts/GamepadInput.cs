@@ -55,19 +55,19 @@ public class GamepadInput : MonoBehaviour {
 
         if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonA"))
         {
-            //TODO
+            playerCharacter.UsePowerUp(Assets.Scripts.Direction.DOWN);
         }
         if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonB"))
         {
-            //TODO
+            playerCharacter.UsePowerUp(Assets.Scripts.Direction.RIGHT);
         }
         if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonX"))
         {
-            //TODO
+            playerCharacter.UsePowerUp(Assets.Scripts.Direction.LEFT);
         }
         if (Input.GetButtonDown("P" + playerCharacter.PlayerIndex + "ButtonY"))
         {
-            //TODO
+            playerCharacter.UsePowerUp(Assets.Scripts.Direction.TOP);
         }
     }
 }
