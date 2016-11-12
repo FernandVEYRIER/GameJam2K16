@@ -53,6 +53,11 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+    public void TakeDamage()
+    {
+        //TODO
+    }
+
     public void DodgeObstacle()
     {
         //TODO
