@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class PlayerCharacter : MonoBehaviour
 {
@@ -24,6 +25,22 @@ public class PlayerCharacter : MonoBehaviour
         else if (gameObject.transform.eulerAngles.z == 260)
         {
             _moves = new List<string> { "Left", "Up", "Right", "Down" };
+        }
+    }
+
+    public void shiftMoves(int shiftBy, bool counterClockwise = false)
+    {
+        if (counterClockwise)
+        {
+            var result = _moves.GetRange(_moves.Count - shiftBy, shiftBy);
+            result.AddRange(_moves.GetRange(0, _moves.Count - shiftBy));
+            _moves = result;
+        }
+        else
+        {
+            var result = _moves.GetRange(shiftBy, _moves.Count - shiftBy);
+            result.AddRange(_moves.GetRange(0, shiftBy));
+            _moves = result;
         }
     }
 
