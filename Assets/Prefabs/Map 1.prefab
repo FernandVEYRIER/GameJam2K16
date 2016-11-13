@@ -584,7 +584,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012499131788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -124.3, y: 31.9, z: 0}
+  m_LocalPosition: {x: -126.7, y: 31.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -688,7 +688,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012331299996}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -19.4, y: 81.7, z: 0}
+  m_LocalPosition: {x: -17.3, y: 81.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_Children: []
@@ -778,7 +778,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011733635200}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -96.6, y: 107.6, z: 0}
+  m_LocalPosition: {x: -96.6, y: 110.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_Children: []
@@ -817,7 +817,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014220910048}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -46.5, y: 4.3, z: 0}
+  m_LocalPosition: {x: -46.5, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_Children: []
@@ -1552,7 +1552,7 @@ MonoBehaviour:
   startDist: 150
   velocity: 0.6
   scrollVelocity: 1
-  minSpawnDelay: 2
+  minSpawnDelay: 1
   obstaclePrefab:
   - {fileID: 1000012455437342, guid: d5c777a475b0cdb489df53e679e2e705, type: 2}
   - {fileID: 1000012855561814, guid: 87c917ba2f9b6cd4d8d22985cb073fdf, type: 2}

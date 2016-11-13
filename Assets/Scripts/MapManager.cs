@@ -61,7 +61,7 @@ public class MapManager : MonoBehaviour {
 
 	void GenerateMap()
 	{
-		bool isWall = Random.Range (0, 2) == 0;
+		bool isWall = Random.Range (0, 6) < 4;
 
 		foreach (MapGenerator m in spawners)
 		{

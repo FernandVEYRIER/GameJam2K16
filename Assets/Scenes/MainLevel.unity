@@ -133,22 +133,6 @@ Prefab:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012279572024, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010677843152, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -126.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011397724284, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -17.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012112007158, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 110.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
   m_IsPrefabParent: 0
