@@ -4,6 +4,8 @@ using Assets.Scripts;
 
 public class MissileController : MonoBehaviour {
 
+	[SerializeField] private GameObject explosionPrefab;
+
 	public float speed = 10;
 	Direction currentDir = Direction.TOP;
 
@@ -44,5 +46,14 @@ public class MissileController : MonoBehaviour {
 
 		curr *= -1;
 		UpdateTarget ((Direction)curr);
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.gameObject.tag == "Ground")
+		{
+			Instantiate (explosionPrefab, transform.position, Quaternion.identity);
+			Destroy (gameObject);
+		}
 	}
 }

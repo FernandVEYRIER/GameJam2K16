@@ -20,13 +20,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011472991110}
   - 33: {fileID: 33000014134674938}
-  - 64: {fileID: 64000012607750658}
   - 23: {fileID: 23000010234273704}
   - 114: {fileID: 114000013177648562}
   - 114: {fileID: 114000013280478816}
+  - 61: {fileID: 61000012603636252}
   m_Layer: 0
   m_Name: bottom
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,13 +56,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014125412480}
   - 33: {fileID: 33000010492714278}
-  - 64: {fileID: 64000013301637228}
   - 23: {fileID: 23000012039607058}
   - 114: {fileID: 114000011378804516}
   - 114: {fileID: 114000012628416716}
+  - 61: {fileID: 61000011175055330}
   m_Layer: 0
   m_Name: top
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,9 +107,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014226007832}
   - 114: {fileID: 114000011971700720}
+  - 114: {fileID: 114000013165116618}
   m_Layer: 0
   m_Name: Map 1
-  m_TagString: Untagged
+  m_TagString: MapManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,13 +215,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014135165246}
   - 33: {fileID: 33000010560889894}
-  - 64: {fileID: 64000010714038384}
   - 23: {fileID: 23000013972467456}
   - 114: {fileID: 114000013038729810}
   - 114: {fileID: 114000012095278762}
+  - 61: {fileID: 61000011948015856}
   m_Layer: 0
   m_Name: left
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,13 +235,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011417308942}
   - 33: {fileID: 33000014152539382}
-  - 64: {fileID: 64000011073759406}
   - 23: {fileID: 23000012281497024}
   - 114: {fileID: 114000010477763502}
   - 114: {fileID: 114000014049750134}
+  - 61: {fileID: 61000010707654726}
   m_Layer: 0
   m_Name: right
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,7 +452,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011508192100}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -21.9, y: 5.9, z: 0}
+  m_LocalPosition: {x: -25.8, y: 5.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_Children: []
@@ -701,54 +702,62 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013281644098}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64000010714038384
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013055661070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64000011073759406
-MeshCollider:
+--- !u!61 &61000010707654726
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013281644098}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.000000014901161, y: -0.43135852}
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64000012607750658
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010124116754}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64000013301637228
-MeshCollider:
+  m_Size: {x: 1, y: 0.13728273}
+--- !u!61 &61000011175055330
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011068369508}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.43135858}
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 1, y: 0.13728285}
+--- !u!61 &61000011948015856
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013055661070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.000000014901161, y: -0.43892688}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.122148514}
+--- !u!61 &61000012603636252
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010124116754}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.43232477}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.13535047}
 --- !u!114 &114000010477763502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -796,7 +805,7 @@ MonoBehaviour:
   - {fileID: 114000012095278762}
   startDist: 150
   velocity: 0.6
-  scrollVelocity: 0.5
+  scrollVelocity: 1
   minSpawnDelay: 2
   obstaclePrefab: {fileID: 1000012455437342, guid: d5c777a475b0cdb489df53e679e2e705,
     type: 2}
@@ -841,6 +850,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.1
+--- !u!114 &114000013165116618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011684481520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2a3321ae8503548b368604d0e7a269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTexture: {fileID: 2800000, guid: e773d6fc15a2121448c8bd8b97ab40c2, type: 3}
+  fadeSpeed: 0.8
 --- !u!114 &114000013177648562
 MonoBehaviour:
   m_ObjectHideFlags: 1

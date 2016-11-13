@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Fading : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class Fading : MonoBehaviour
     private float alpha = 1.0f;
     private int fadeDir = -1;
         
+	void Start()
+	{
+		SceneManager.sceneLoaded += delegate(Scene arg0, LoadSceneMode arg1)
+		{
+			BeginFade(-1);
+		};
+	}
+
 	void OnGUI()
     {
         alpha += fadeDir * fadeSpeed * Time.deltaTime;
@@ -24,10 +33,5 @@ public class Fading : MonoBehaviour
     {
         fadeDir = direction;
         return (fadeSpeed);
-    }
-
-    void OnLevelWasLoaded()
-    {
-        BeginFade(-1);
     }
 }

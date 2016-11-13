@@ -24,6 +24,7 @@ public class GameManager : AGameManager {
 
 	[Header("Map")]
 	[SerializeField] private RotateMap map;
+	[SerializeField] private MapManager mapManager;
 
 	private PlayerController[] playerControllers = new PlayerController[Constants.NB_MAX_PLAYERS];
     
@@ -34,6 +35,8 @@ public class GameManager : AGameManager {
 		canvasGame.SetActive (true);
 		canvasPause.SetActive (false);
 		base.Start ();
+
+		mapManager = GameObject.FindGameObjectWithTag ("MapManager").GetComponent<MapManager> ();
 
 		for (int i = 0; i < playerPrefabs.Length; ++i)
 		{
@@ -89,4 +92,9 @@ public class GameManager : AGameManager {
         }
         return -1; //let us hope that this never happens
     }
+
+	public void PlayerTakeDamage(int playerID)
+	{
+		mapManager.TakeSlow (playerID);
+	}
 }

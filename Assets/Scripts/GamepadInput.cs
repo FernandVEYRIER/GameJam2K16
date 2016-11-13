@@ -27,27 +27,22 @@ public class GamepadInput : MonoBehaviour {
             }
 		}
         /////////////////////// AXES ////////////////////////////////
-        if (Input.GetAxis("P" + index + "LeftHorizontal") > 0)
+        if (Input.GetAxis("P" + index + "LeftHorizontal") > 0.4)
         {
-            //TODO
+            jump("Up");
         }
-        else if (Input.GetAxis("P" + index + "LeftHorizontal") < 0)
+        else if (Input.GetAxis("P" + index + "LeftHorizontal") < 0.4)
         {
-            //TODO
+            jump("Left");
         }
 
         if (Input.GetAxis("P" + index + "LeftVertical") > 0.4)
         {
-            Debug.Log("Get input space. Grounded ? " + playerCharacter.Grounded);
-            if (playerCharacter.Grounded)
-            {
-                playerCharacter.Grounded = false;
-                GetComponent<Rigidbody2D>().AddForce(transform.up * 4500f);
-            }
+            jump("Right");
         }
-        else if (Input.GetAxis("P" + index + "LeftVertical") < 0)
+        else if (Input.GetAxis("P" + index + "LeftVertical") < 0.4)
         {
-            //TODO
+            jump("Down");
         }
 
         if (Input.GetAxis("P" + index + "RightHorizontal") > 0)
@@ -92,6 +87,22 @@ public class GamepadInput : MonoBehaviour {
         {
             Debug.Log("GamePAuse");
             GameManager.GM.SetPause();
+        }
+    }
+
+    void jump(string dir)
+    {
+        if (playerCharacter.Grounded)
+        {
+            if (playerCharacter.Moves[0] == dir)
+            {
+                playerCharacter.Grounded = false;
+                GetComponent<Rigidbody2D>().AddForce(transform.up * 4500f);
+            }
+            else
+            {
+                //TODO: feedback wrong input 
+            }
         }
     }
 }

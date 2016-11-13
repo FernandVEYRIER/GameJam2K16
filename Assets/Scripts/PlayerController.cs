@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 	{ get { return _grounded; }
         set { _grounded = value; }
     }
+    public List<string> Moves { get { return _moves; } }
 
 	private bool _grounded = false;
 	private int _playerIndex = -1;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
 		}
 		else if (col.tag == "Obstacle")
 		{
+			TakeDamage ();
 			Debug.Log ("Player " + PlayerIndex + " boom");
 		}
 	}
@@ -64,6 +66,7 @@ public class PlayerController : MonoBehaviour
 		}
 		else if (col.gameObject.tag == "Obstacle")
 		{
+			TakeDamage ();
 			Debug.Log ("Player " + PlayerIndex + " boom");
 		}
 		else if (col.gameObject.tag == "Ground")
@@ -94,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
-        //TODO
+		((GameManager)GameManager.GM).PlayerTakeDamage (_playerIndex);
     }
 
     public void DodgeObstacle()
