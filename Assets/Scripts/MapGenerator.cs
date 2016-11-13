@@ -63,4 +63,9 @@ public class MapGenerator : MonoBehaviour {
 		if (_objects.Remove (go))
 			Destroy (go);
 	}
+
+    public float GetDistance()
+    {
+        return distance;
+    }
 }
