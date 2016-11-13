@@ -7,7 +7,7 @@ public class MovePlayer : MonoBehaviour
     public MapGenerator[] maps;
     public GameObject panel;
     private GameObject[] children;
-    private SortedDictionary<int, float> scores = new SortedDictionary<int, float>();
+    private List<KeyValuePair<int, float>> scores = new List<KeyValuePair<int, float>>();
     private Dictionary<int, Transform> TextBox = new Dictionary<int, Transform>();
 
     private class infosPlayer
@@ -30,9 +30,8 @@ public class MovePlayer : MonoBehaviour
         int children = transform.childCount;
         scores.Clear();
         for (int i = 0; i < maps.Length; ++i)
-        {
-            scores.Add(i, maps[i].GetDistance());
-        }
+            scores.Add(new KeyValuePair<int, float>( i, maps[i].GetDistance()));
+        scores.Sort((pair1, pair2) => -pair1.Value.CompareTo(pair2.Value));
         foreach (KeyValuePair<int, float> item in scores)
         {
             print(TextBox.Count);
