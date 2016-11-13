@@ -18,7 +18,7 @@ public class MapGenerator : MonoBehaviour {
 	[SerializeField] private Transform spawnPoint;
 	private float distance = 0;
 	private List<Obstacle> terrainList = new List<Obstacle> ();
-	private float currVelocity = 1;
+	[HideInInspector] public float currVelocity = 1;
 	private List<GameObject> _objects = new List<GameObject> ();
 	private AnimateSprite _animateSprite;
 

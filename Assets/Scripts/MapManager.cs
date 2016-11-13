@@ -9,6 +9,7 @@ public class MapManager : MonoBehaviour {
 	[SerializeField] private MapGenerator[] spawners;
 	[SerializeField] private float startDist;
 	[SerializeField] private float velocity;
+	[SerializeField] private float scrollVelocity = 1;
 
 	[Header("Objects")]
 	[SerializeField] private float minSpawnDelay = 2f;
@@ -33,6 +34,9 @@ public class MapManager : MonoBehaviour {
 				sides [i].transform.position -= sides [i].transform.right * startDist;
 			}
 		}
+
+		foreach (MapGenerator m in spawners)
+			m.currVelocity = scrollVelocity;
 	}
 	
 	// Update is called once per frame
