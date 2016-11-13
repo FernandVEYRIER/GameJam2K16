@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 	{ get { return _grounded; }
         set { _grounded = value; }
     }
+    public List<string> Moves { get { return _moves; } }
 
 	private bool _grounded = false;
 	private int _playerIndex = -1;
