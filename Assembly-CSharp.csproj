@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AGameManager.cs" />
      <Compile Include="Assets\Scripts\APowerUp.cs" />
+     <Compile Include="Assets\Scripts\AnimateSprite.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\DetroyObj.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -64,7 +65,6 @@
      <Compile Include="Assets\Scripts\PowerUpRotate.cs" />
      <Compile Include="Assets\Scripts\PowerUpShield.cs" />
      <Compile Include="Assets\Scripts\RotateMap.cs" />
-     <Compile Include="Assets\Sprites\AnimateSprite.cs" />
      <None Include="Assets\Shaders\MaskTest.shader" />
      <None Include="Assets\Shaders\TransparencyShader.shader" />
  <Reference Include="UnityEngine.UI">

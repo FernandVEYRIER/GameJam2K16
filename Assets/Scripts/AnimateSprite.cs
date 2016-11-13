@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AnimateSprite : MonoBehaviour {
 
-    public float scrollSpeed = 0.5F;
+	[HideInInspector] public float scrollSpeed = 0.5F;
     private Renderer rend;
     void Start()
     {

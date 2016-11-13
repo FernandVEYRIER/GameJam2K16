@@ -20,12 +20,22 @@ public class MapGenerator : MonoBehaviour {
 	private List<Obstacle> terrainList = new List<Obstacle> ();
 	private float currVelocity = 1;
 	private List<GameObject> _objects = new List<GameObject> ();
-	
+	private AnimateSprite _animateSprite;
+
+	const float RATIO = 0.478f;
+
+	void Start()
+	{
+		_animateSprite = GetComponent<AnimateSprite> ();
+		_animateSprite.scrollSpeed = currVelocity * RATIO;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		
 		if (GameManager.GM.State == Assets.Scripts.GameState.PLAY)
 		{
+			_animateSprite.scrollSpeed = currVelocity * RATIO;
 			if (terrainList.Count > 0 && terrainList[0].objDistance <= distance)
 			{
 				if (terrainList[0].obstaclePrefab != null)
@@ -41,7 +51,6 @@ public class MapGenerator : MonoBehaviour {
 					g.transform.position += g.transform.up * currVelocity;
 			}
 		}
-	
 	}
 
 	public void PushTerrain(Obstacle obs)
