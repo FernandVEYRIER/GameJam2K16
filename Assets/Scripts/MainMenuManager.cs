@@ -23,23 +23,36 @@ public class MainMenuManager : AGameManager {
     {
         base.Update();
         float axis = Input.GetAxis("Horizontal");
-        if (map.getState() == RotateMap.State.none)
+        if (Input.GetAxis("Submit") != 0 && !selected && current == 3)
+        {
+            selected = true;
+            LoadLevel(1);
+        }
+        else if (map.getState() == RotateMap.State.none)
         {
             if (axis > 0)
-            {
-                buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
-                --current;
-                if (current < 0)
-                    current = buttons.Length - 1;
-            }
+                Previous();
             else if (axis < 0)
-            {
-                buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
-                ++current;
-                if (current >= buttons.Length)
-                    current = 0;
-            }
+                Next();
         }
+        else
+            selected = false;
+    }
+
+    void Previous()
+    {
+        buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
+        --current;
+        if (current < 0)
+            current = buttons.Length - 1;
+    }
+
+    void Next()
+    {
+        buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
+        ++current;
+        if (current >= buttons.Length)
+            current = 0;
     }
 
     void Selected()
@@ -54,5 +67,17 @@ public class MainMenuManager : AGameManager {
             selected = true;
             buttons[current].GetComponent<SpriteRenderer>().material.color = grey;
         }
+    }
+
+    override public void LoadLevel(int level)
+    {
+        StartCoroutine("FadeLevel", level);
+    }
+
+    IEnumerator FadeLevel(int level)
+    {
+        float fadeTime = GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        SceneManager.LoadScene(level);
     }
 }
