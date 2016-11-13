@@ -3,6 +3,9 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class MainMenuManager : AGameManager {
+	
+	[SerializeField] private GameObject credits;
+
     public GameObject[] buttons;
     private int current;
     private bool selected;
@@ -12,6 +15,7 @@ public class MainMenuManager : AGameManager {
     public override void Start()
     {
         base.Start();
+		credits.SetActive (false);
         current = 0;
         selected = false;
         if (!map)
@@ -28,6 +32,11 @@ public class MainMenuManager : AGameManager {
             selected = true;
             LoadLevel(1);
         }
+		else if (Input.GetAxis("Submit") != 0 && !selected && current == 2)
+		{
+			selected = true;
+			ShowCredits ();
+		}
         else if (map.getState() == RotateMap.State.none)
         {
             if (axis > 0)
@@ -80,4 +89,9 @@ public class MainMenuManager : AGameManager {
         yield return new WaitForSeconds(fadeTime);
         SceneManager.LoadScene(level);
     }
+
+	public void ShowCredits()
+	{
+		credits.SetActive (!credits.activeSelf);
+	}
 }
