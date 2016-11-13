@@ -34,6 +34,12 @@ public class RotateMap : MonoBehaviour {
             targetRotation *= rotations[(int)status];
             status = State.none;
         }
+
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed);
+    }
+
+    public State getState()
+    {
+        return status;
     }
 }
