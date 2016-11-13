@@ -45,8 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\InventoryPlayer.cs" />
-     <Compile Include="Assets\MovePlayer.cs" />
      <Compile Include="Assets\Scripts\AGameManager.cs" />
      <Compile Include="Assets\Scripts\APowerUp.cs" />
      <Compile Include="Assets\Scripts\AnimateSprite.cs" />
@@ -59,10 +57,12 @@
      <Compile Include="Assets\Scripts\HandleGui.cs" />
      <Compile Include="Assets\Scripts\IGameManager.cs" />
      <Compile Include="Assets\Scripts\IPowerUp.cs" />
+     <Compile Include="Assets\Scripts\InventoryPlayer.cs" />
      <Compile Include="Assets\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Scripts\MapGenerator.cs" />
      <Compile Include="Assets\Scripts\MapManager.cs" />
      <Compile Include="Assets\Scripts\MissileController.cs" />
+     <Compile Include="Assets\Scripts\MovePlayer.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PowerUpMissile.cs" />
      <Compile Include="Assets\Scripts\PowerUpReflector.cs" />
