@@ -66,7 +66,6 @@ public class PlayerController : MonoBehaviour
 		else if (col.gameObject.tag == "Obstacle")
 		{
 			TakeDamage ();
-			Debug.Log ("Player " + PlayerIndex + " boom");
 		}
 		else if (col.gameObject.tag == "Ground")
 		{

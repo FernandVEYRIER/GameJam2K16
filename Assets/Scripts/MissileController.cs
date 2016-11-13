@@ -8,6 +8,7 @@ public class MissileController : MonoBehaviour {
 
 	public float speed = 10;
 	Direction currentDir = Direction.TOP;
+    Vector2 targetCoordinateTop = new Vector2(47, 50);
 
 	// Use this for initialization
 	void Start () {
@@ -52,7 +53,8 @@ public class MissileController : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Ground")
 		{
-			Instantiate (explosionPrefab, transform.position, Quaternion.identity);
+            Debug.Log("hi");
+			//Instantiate (explosionPrefab, transform.position, Quaternion.identity);
 			Destroy (gameObject);
 		}
 	}
