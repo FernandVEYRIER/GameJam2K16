@@ -1,12 +1,13 @@
 fileFormatVersion: 2
-guid: ac4c545385ad42e4785b87a3def53190
-timeCreated: 1478984070
+guid: 2b6f7250632e46943b922cb7c76cf290
+timeCreated: 1478994507
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sprite_sheet_0
-    21300002: sprite_sheet_1
-    21300004: sprite_sheet_2
+    21300000: Justine_0
+    21300002: Justine_1
+    21300004: Justine_2
+    21300006: Justine_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,7 +57,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_sheet_0
+      name: Justine_0
       rect:
         serializedVersion: 2
         x: 0
@@ -69,7 +70,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_sheet_1
+      name: Justine_1
       rect:
         serializedVersion: 2
         x: 512
@@ -82,10 +83,23 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_sheet_2
+      name: Justine_2
       rect:
         serializedVersion: 2
         x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Justine_3
+      rect:
+        serializedVersion: 2
+        x: 512
         y: 0
         width: 512
         height: 512

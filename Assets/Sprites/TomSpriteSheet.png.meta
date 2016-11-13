@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: ac4c545385ad42e4785b87a3def53190
-timeCreated: 1478984070
+guid: 018b8151f196abe4ea9c11a78df87e68
+timeCreated: 1478993717
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sprite_sheet_0
-    21300002: sprite_sheet_1
-    21300004: sprite_sheet_2
+    21300000: TomSpriteSheet_0
+    21300002: TomSpriteSheet_1
+    21300004: TomSpriteSheet_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,7 +56,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_sheet_0
+      name: TomSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -69,7 +69,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_sheet_1
+      name: TomSpriteSheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -82,7 +82,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_sheet_2
+      name: TomSpriteSheet_2
       rect:
         serializedVersion: 2
         x: 0
