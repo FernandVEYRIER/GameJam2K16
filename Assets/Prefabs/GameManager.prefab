@@ -70,5 +70,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  gravity: -250
+  gravity: -300
   map: {fileID: 0}
+  mapManager: {fileID: 0}

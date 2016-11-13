@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011675584616}
   - 212: {fileID: 212000014058469638}
-  - 58: {fileID: 58000011465940446}
   - 50: {fileID: 50000012836315162}
   - 114: {fileID: 114000013052437190}
+  - 60: {fileID: 60000012232231020}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: PowerUp
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1000010323259566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,9 +59,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &58000011465940446
-CircleCollider2D:
+  m_Constraints: 4
+--- !u!60 &60000012232231020
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -72,8 +72,34 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.625
+  m_Points:
+    m_Paths:
+    - - {x: 5.5000005, y: -2.9333334}
+      - {x: 4.4333334, y: -1.6000001}
+      - {x: 2.5666668, y: -1.6000001}
+      - {x: -2.3000002, y: 2.9333334}
+      - {x: -1.3666668, y: 4}
+      - {x: -1.3666668, y: 4.3333335}
+      - {x: -1.7, y: 5.066667}
+      - {x: -2.5000002, y: 5.866667}
+      - {x: -2.766667, y: 5.866667}
+      - {x: -3.0333335, y: 5.8}
+      - {x: -4.2333336, y: 4.7333336}
+      - {x: -5.166667, y: 5.3333335}
+      - {x: -5.5000005, y: 4.8}
+      - {x: -5.5000005, y: 3.6000001}
+      - {x: 1.3000001, y: -2.6000001}
+      - {x: 1.0333334, y: -3.4}
+      - {x: 1.3000001, y: -5.066667}
+      - {x: 1.9666668, y: -5.666667}
+      - {x: 2.4333334, y: -5.8}
+      - {x: 3.966667, y: -5.8}
+      - {x: 4.7000003, y: -5.533334}
+      - {x: 5.3, y: -4.7333336}
+      - {x: 5.5000005, y: -4.3333335}
+    - - {x: 2.9, y: -4}
+      - {x: 3.766667, y: -3.6666667}
+      - {x: 3.5934737, y: -4.2398586}
 --- !u!114 &114000013052437190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,7 +143,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 19dd4b32781dbc2419bb90a6b67e0f32, type: 3}
+  m_Sprite: {fileID: 21300014, guid: 031fcfcbc5ca1b4418386c3af39220e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
