@@ -29,18 +29,19 @@ public class GamepadInput : MonoBehaviour {
         /////////////////////// AXES ////////////////////////////////
         if (Input.GetAxis("P" + index + "LeftHorizontal") > 0.4)
         {
-            jump("Up");
+            jump("Right");
         }
-        else if (Input.GetAxis("P" + index + "LeftHorizontal") < 0.4)
+        else if (Input.GetAxis("P" + index + "LeftHorizontal") < -0.4)
         {
             jump("Left");
         }
 
         if (Input.GetAxis("P" + index + "LeftVertical") > 0.4)
         {
-            jump("Right");
+            Debug.Log("current index:" + index);
+            jump("Up");
         }
-        else if (Input.GetAxis("P" + index + "LeftVertical") < 0.4)
+        else if (Input.GetAxis("P" + index + "LeftVertical") < -0.4)
         {
             jump("Down");
         }
@@ -97,7 +98,7 @@ public class GamepadInput : MonoBehaviour {
             if (playerCharacter.Moves[0] == dir)
             {
                 playerCharacter.Grounded = false;
-                GetComponent<Rigidbody2D>().AddForce(transform.up * 4500f);
+                playerCharacter.GetComponent<Rigidbody2D>().AddForce(transform.up * 4500f);
             }
             else
             {
