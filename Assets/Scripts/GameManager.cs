@@ -20,6 +20,7 @@ public class GameManager : AGameManager {
 	[Header("Player")]
 	[SerializeField] private GameObject[] playerPrefabs;
 	[SerializeField] private Transform[] spawnPoints;
+	[SerializeField] private float gravity = -80f;
 
 	[Header("Map")]
 	[SerializeField] private RotateMap map;
@@ -40,6 +41,7 @@ public class GameManager : AGameManager {
 			go.name = "Player" + (i + 1);
 			playerControllers [i] = go.GetComponent<PlayerController> ();
 			go.GetComponent<PlayerController> ().PlayerIndex = i;
+			go.GetComponent<ConstantForce2D> ().relativeForce = Vector2.zero;
 		}
 
 		StartCoroutine (GameStartRoutine ());
@@ -55,6 +57,10 @@ public class GameManager : AGameManager {
 		}
 		textCounter.text = "";
 		UpdateState (GameState.PLAY);
+		foreach (PlayerController p in playerControllers)
+		{
+			p.GetComponent<ConstantForce2D> ().relativeForce = new Vector2(0, gravity);
+		}
 	}
 	
 	override public void SetPause()

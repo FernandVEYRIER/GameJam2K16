@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public class GamepadInput : MonoBehaviour {
 
@@ -16,6 +17,12 @@ public class GamepadInput : MonoBehaviour {
     {
         var index = playerCharacter.PlayerIndex;
 
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			Debug.Log ("Get input space. Grounded ? " + playerCharacter.Grounded);
+			if (playerCharacter.Grounded)
+				GetComponent<Rigidbody2D> ().AddForce (transform.up * 4500f);
+		}
         /////////////////////// AXES ////////////////////////////////
         if (Input.GetAxis("P" + index + "LeftHorizontal") > 0)
         {

@@ -6,7 +6,10 @@ using Assets.Scripts;
 public class PlayerController : MonoBehaviour
 {
     public bool hasShield = false;
+	public bool Grounded
+	{ get { return _grounded; }}
 
+	private bool _grounded = false;
 	private int _playerIndex = -1;
     private Direction _position;
 	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
@@ -46,6 +49,32 @@ public class PlayerController : MonoBehaviour
 		else if (col.tag == "Obstacle")
 		{
 			Debug.Log ("Player " + PlayerIndex + " boom");
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "PowerUp")
+		{
+			Debug.Log("I am " + _playerIndex + " and I now have the powerup");
+			currPowerUp = col.gameObject.GetComponent<APowerUp> ();
+			Destroy (col.gameObject);
+		}
+		else if (col.gameObject.tag == "Obstacle")
+		{
+			Debug.Log ("Player " + PlayerIndex + " boom");
+		}
+		else if (col.gameObject.tag == "Ground")
+		{
+			_grounded = true;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Ground")
+		{
+			_grounded = false;
 		}
 	}
 

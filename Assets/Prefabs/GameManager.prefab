@@ -53,21 +53,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AS: {fileID: 0}
   shieldSound: {fileID: 8300000, guid: b441c28ec4022db49ace9df5b203e592, type: 3}
-  reflectorSound: {fileID: 8300000, guid: 86e730c7e1b834847b1279bb4e728ec8, type: 3}
-  reflectedSound: {fileID: 8300000, guid: ea19270d977d0534f843bb67e2416cd7, type: 3}
-  rotationSound: {fileID: 8300000, guid: 990a324120a3f734593886330b6c6338, type: 3}
-  missileSound: {fileID: 8300000, guid: cbdcc27611f431f4dbc65ffa38095611, type: 3}
+  reflectorSound: {fileID: 8300000, guid: 0b9abad1af3c10649a4eb2f288ee7bc7, type: 3}
+  reflectedSound: {fileID: 8300000, guid: 0444e47ca7604ba4c806b822143d9c07, type: 3}
+  rotationSound: {fileID: 8300000, guid: 60bd8f0aef88f0e49993828a0603588c, type: 3}
+  missileSound: {fileID: 8300000, guid: acf8d18602af3df4aa1c040e97a09b29, type: 3}
   canvasPause: {fileID: 0}
   canvasGame: {fileID: 0}
   textCounter: {fileID: 0}
   playerPrefabs:
-  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
-  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
-  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
-  - {fileID: 1000010152729252, guid: be76fcff430fe7d439758e17323ab376, type: 2}
+  - {fileID: 1000013075599804, guid: 31bf17a3cc121bc4fbaa08b4e880c038, type: 2}
+  - {fileID: 1000011858095574, guid: bf1bf213ce4b1fd44848b3e53725dea8, type: 2}
+  - {fileID: 1000010926851688, guid: cb1091aa22405114cb36df020c2eec47, type: 2}
+  - {fileID: 1000012163486122, guid: 720e3631ffc347e4bb04520aa73d2927, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  gravity: -250
   map: {fileID: 0}
