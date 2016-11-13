@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     public bool hasShield = false;
 	public bool Grounded
-	{ get { return _grounded; }}
+	{ get { return _grounded; }
+        set { _grounded = value; }
+    }
 
 	private bool _grounded = false;
 	private int _playerIndex = -1;
