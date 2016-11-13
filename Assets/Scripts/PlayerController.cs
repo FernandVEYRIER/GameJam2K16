@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
 		else if (col.tag == "Obstacle")
 		{
 			TakeDamage ();
-			Debug.Log ("Player " + PlayerIndex + " boom");
 		}
 	}
 

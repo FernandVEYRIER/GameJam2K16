@@ -10,13 +10,6 @@ public class MovePlayer : MonoBehaviour
     private List<KeyValuePair<int, float>> scores = new List<KeyValuePair<int, float>>();
     private Dictionary<int, Transform> TextBox = new Dictionary<int, Transform>();
 
-    private class infosPlayer
-    {
-        public GameObject obj;
-        public float distance;
-        public int pos;
-    }
-
     void Start()
     {
         int children = panel.transform.childCount;
@@ -34,7 +27,6 @@ public class MovePlayer : MonoBehaviour
         scores.Sort((pair1, pair2) => -pair1.Value.CompareTo(pair2.Value));
         foreach (KeyValuePair<int, float> item in scores)
         {
-            print(TextBox.Count);
             TextBox[item.Key].SetAsLastSibling();
             
             Transform current = TextBox[item.Key].GetChild(1);
