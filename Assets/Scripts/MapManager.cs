@@ -70,4 +70,9 @@ public class MapManager : MonoBehaviour {
 			m.PushTerrain (new Obstacle((isWall) ? obstaclePrefab : powerupPrefabs[Random.Range(0, powerupPrefabs.Length)], distance));
 		}
 	}
+
+	public void TakeSlow(int playerID)
+	{
+		spawners [playerID].TakeSlow ();
+	}
 }

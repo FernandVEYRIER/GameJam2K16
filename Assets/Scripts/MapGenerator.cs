@@ -21,18 +21,19 @@ public class MapGenerator : MonoBehaviour {
 	[HideInInspector] public float currVelocity = 1;
 	private List<GameObject> _objects = new List<GameObject> ();
 	private AnimateSprite _animateSprite;
+	private float initVel;
 
-	const float RATIO = 0.478f;
+	const float RATIO = 0.285f;
 
 	void Start()
 	{
 		_animateSprite = GetComponent<AnimateSprite> ();
 		_animateSprite.scrollSpeed = currVelocity * RATIO;
+		initVel = currVelocity;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
 		if (GameManager.GM.State == Assets.Scripts.GameState.PLAY)
 		{
 			_animateSprite.scrollSpeed = currVelocity * RATIO;
@@ -62,5 +63,26 @@ public class MapGenerator : MonoBehaviour {
 	{
 		if (_objects.Remove (go))
 			Destroy (go);
+	}
+
+	public void TakeSlow()
+	{
+		StopAllCoroutines ();
+		StartCoroutine (HitObstacleRoutine ());
+	}
+
+	IEnumerator HitObstacleRoutine()
+	{
+		for (; currVelocity >= 0; currVelocity -= initVel / 20f)
+		{
+			yield return new WaitForSeconds (0.025f);
+		}
+
+		for (currVelocity = 0; currVelocity < initVel; currVelocity += initVel / 20f)
+		{
+			yield return new WaitForSeconds (0.025f);
+		}
+
+		currVelocity = initVel;
 	}
 }

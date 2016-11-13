@@ -8,6 +8,7 @@ TagManager:
   - PowerUp
   - Missile
   - Ground
+  - MapManager
   layers:
   - Default
   - TransparentFX
