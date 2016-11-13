@@ -37,6 +37,11 @@ public class MainMenuManager : AGameManager {
 			selected = true;
 			ShowCredits ();
 		}
+		else if (Input.GetAxis("Submit") != 0 && !selected && current == 1)
+		{
+			selected = true;
+			OnQuit ();
+		}
         else if (map.getState() == RotateMap.State.none)
         {
             if (axis > 0)
