@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\CanonManager.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\DetroyObj.cs" />
+     <Compile Include="Assets\Scripts\Fading.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GamepadInput.cs" />
      <Compile Include="Assets\Scripts\HandleGui.cs" />
