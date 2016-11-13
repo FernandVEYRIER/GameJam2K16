@@ -36,9 +36,12 @@ public class MovePlayer : MonoBehaviour
         {
             print(TextBox.Count);
             TextBox[item.Key].SetAsLastSibling();
-            int len = TextBox[item.Key].childCount;
+            
+            Transform current = TextBox[item.Key].GetChild(1);
+            int len = current.childCount;
+            current.GetComponent<Text>().text = "Player " + (item.Key + 1) + "\n\t" + item.Value / 10 + "m";
             for (int i = 0; i < len; ++i)
-                TextBox[item.Key].GetChild(i).GetComponent<Text>().text = "Player " + (item.Key + 1) + "\n\t" + item.Value / 10 + "m";
+                current.GetChild(i).GetComponent<Text>().text = "Player " + (item.Key + 1) + "\n\t" + item.Value / 10 + "m";
         }
     }
 }
