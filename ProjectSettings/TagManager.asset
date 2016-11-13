@@ -9,6 +9,7 @@ TagManager:
   - Missile
   - Ground
   - MapManager
+  - Ceiling
   layers:
   - Default
   - TransparentFX
