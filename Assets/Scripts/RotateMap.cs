@@ -29,13 +29,11 @@ public class RotateMap : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (State.none != status)
-        {
+        if (transform.rotation == targetRotation)
             targetRotation *= rotations[(int)status];
-            status = State.none;
-        }
-
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed);
+        if (transform.rotation == targetRotation && State.none != status)
+            status = State.none;
     }
 
     public State getState()
