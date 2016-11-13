@@ -10,8 +10,9 @@ public class PowerUpMissile : APowerUp {
 	{
 		if (base.Use())
 		{
-			Transform startPoint = GameObject.Find ("Player" + (sender + 1)).transform.GetChild(0);
-			Instantiate (missilePrefab, startPoint.position, startPoint.rotation);
+			GameObject.Find ("CanonObj").GetComponent<CanonManager> ().Shoot ();
+			//Transform startPoint = GameObject.Find ("Player" + (sender + 1)).transform.GetChild(0);
+			//Instantiate (missilePrefab, startPoint.position, startPoint.rotation);
             ((GameManager)GameManager.GM).AS.PlayOneShot(((GameManager)GameManager.GM).missileSound);
 
             return true;
