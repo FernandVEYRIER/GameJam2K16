@@ -15,7 +15,7 @@ public class GameManager : AGameManager {
     [Header("GUI")]
 	[SerializeField] private GameObject canvasPause;
 	[SerializeField] private GameObject canvasGame;
-	[SerializeField] private Text textCounter;
+	[SerializeField] private GameObject textCounter;
 
 	[Header("Player")]
 	[SerializeField] private GameObject[] playerPrefabs;
@@ -57,10 +57,12 @@ public class GameManager : AGameManager {
 		UpdateState (GameState.WARMUP);
 		for (int i = 3; i > 0; --i)
 		{
-			textCounter.text = i.ToString();
+			foreach (Text t in textCounter.GetComponentsInChildren<Text>())
+				t.text = i.ToString();
 			yield return new WaitForSeconds (1);
 		}
-		textCounter.text = "";
+		foreach (Text t in textCounter.GetComponentsInChildren<Text>())
+			t.text = "";
 		UpdateState (GameState.PLAY);
 		foreach (PlayerController p in playerControllers)
 		{
