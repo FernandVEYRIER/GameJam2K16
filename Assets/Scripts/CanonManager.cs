@@ -50,7 +50,7 @@ public class CanonManager : MonoBehaviour {
 				}
 			}
 			currDelay -= Time.deltaTime;
-			textMissile.text = missilesToLaunch.Count.ToString();
+			//textMissile.text = missilesToLaunch.Count.ToString();
 		}
 		else
 		{

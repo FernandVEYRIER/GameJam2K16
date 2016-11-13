@@ -40,6 +40,8 @@ public class GameManager : AGameManager {
 			GameObject go = (GameObject)Instantiate (playerPrefabs [i], spawnPoints [i].position, spawnPoints[i].rotation);
 			go.name = "Player" + (i + 1);
 			playerControllers [i] = go.GetComponent<PlayerController> ();
+            if (i > 0)
+                playerControllers[i].shiftMoves(i, true);
 			go.GetComponent<PlayerController> ().PlayerIndex = i;
 			go.GetComponent<ConstantForce2D> ().relativeForce = Vector2.zero;
 		}
@@ -71,6 +73,8 @@ public class GameManager : AGameManager {
 
 	public void RotateMap(bool clockwise = true)
 	{
+        for (int i = 0; i < playerControllers.Length; i++)
+            playerControllers[i].shiftMoves(1, !clockwise);
 		map.rotate ((clockwise) ? global::RotateMap.State.right : global::RotateMap.State.left);
 	}
 
