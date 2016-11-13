@@ -54,6 +54,11 @@ public class MapGenerator : MonoBehaviour {
 		}
 	}
 
+    public float GetDistance()
+    {
+        return distance;
+    }
+
 	public void PushTerrain(Obstacle obs)
 	{
 		terrainList.Add (obs);
