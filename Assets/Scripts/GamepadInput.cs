@@ -86,7 +86,7 @@ public class GamepadInput : MonoBehaviour {
         }
         if (Input.GetButtonDown("P" + index + "ButtonPause"))
         {
-            Debug.Log("GamePAuse");
+            Debug.Log("GamePause");
             GameManager.GM.SetPause();
         }
     }
