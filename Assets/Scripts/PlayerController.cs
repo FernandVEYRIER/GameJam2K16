@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
 		}
 		else if (col.tag == "Obstacle")
 		{
+			TakeDamage ();
 			Debug.Log ("Player " + PlayerIndex + " boom");
 		}
 	}
@@ -65,6 +66,7 @@ public class PlayerController : MonoBehaviour
 		}
 		else if (col.gameObject.tag == "Obstacle")
 		{
+			TakeDamage ();
 			Debug.Log ("Player " + PlayerIndex + " boom");
 		}
 		else if (col.gameObject.tag == "Ground")
@@ -95,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
-        //TODO
+		((GameManager)GameManager.GM).PlayerTakeDamage (_playerIndex);
     }
 
     public void DodgeObstacle()
