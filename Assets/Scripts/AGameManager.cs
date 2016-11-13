@@ -73,6 +73,6 @@ public abstract class AGameManager : MonoBehaviour {
 
 	virtual public void LoadLevel(int level)
 	{
-		SceneManager.LoadScene (level);
+		SceneManager.LoadSceneAsync (level);
 	}
 }
