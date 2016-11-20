@@ -73,6 +73,11 @@ public class MapGenerator : MonoBehaviour {
 		terrainList.Add (obs);
 	}
 
+	public void PushObject(GameObject obj)
+	{
+		_objects.Add (obj);
+	}
+
 	public void DestroyObject(GameObject go)
 	{
 		if (_objects.Remove (go))

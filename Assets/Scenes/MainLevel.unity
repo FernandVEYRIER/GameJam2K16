@@ -449,11 +449,6 @@ Prefab:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011971700720, guid: ca9d9d4f564b45e43885b3a663671bdb,
-        type: 2}
-      propertyPath: minSpawnDelay
-      value: 0.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca9d9d4f564b45e43885b3a663671bdb, type: 2}
   m_IsPrefabParent: 0

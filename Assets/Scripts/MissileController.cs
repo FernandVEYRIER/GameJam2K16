@@ -56,5 +56,11 @@ public class MissileController : MonoBehaviour {
 			Instantiate (explosionPrefab, transform.position, Quaternion.identity);
 			Destroy (gameObject);
 		}
+		else if (col.gameObject.tag == "Player")
+		{
+			((GameManager)GameManager.GM).PlayerTakeDamage (col.gameObject.GetComponent<PlayerController> ().PlayerIndex);
+			Instantiate (explosionPrefab, transform.position, Quaternion.identity);
+			Destroy (gameObject);
+		}
 	}
 }
