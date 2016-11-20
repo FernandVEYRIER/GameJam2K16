@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a437cb392c53148a102c1f0a03f58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 1000012579292430, guid: b5c924e5cd0c67a4db8e979ecb7630ca,
+    type: 2}
   speed: 10
 --- !u!212 &212000012067098084
 SpriteRenderer:

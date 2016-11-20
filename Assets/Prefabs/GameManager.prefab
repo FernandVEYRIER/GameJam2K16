@@ -227,6 +227,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  defaultPowerUp: {fileID: 21300028, guid: 031fcfcbc5ca1b4418386c3af39220e2, type: 3}
   playerPrefabs:
   - {fileID: 1000013075599804, guid: 31bf17a3cc121bc4fbaa08b4e880c038, type: 2}
   - {fileID: 1000011858095574, guid: bf1bf213ce4b1fd44848b3e53725dea8, type: 2}

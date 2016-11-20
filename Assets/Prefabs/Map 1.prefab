@@ -1546,6 +1546,7 @@ MonoBehaviour:
   powerupPrefabs:
   - {fileID: 1000010323259566, guid: 346604eb9e0350346bc26c9179baa4e1, type: 2}
   - {fileID: 1000010323259566, guid: 83697539021e3b141babf060a0454b6d, type: 2}
+  - {fileID: 1000011604084408, guid: 935d1950932aa0f4bb85e6d15edf7df3, type: 2}
 --- !u!114 &114000012095278762
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -88,10 +88,12 @@ public class PlayerController : MonoBehaviour
         Debug.Log("i am _playerIndex " + _playerIndex);
         if (currPowerUp != null)
 		{
-            Debug.Log("hello again _playerIndex " +_playerIndex);
 			currPowerUp.Use (d, _playerIndex);
 			if (currPowerUp.RemainingUsages <= 0)
+			{
 				currPowerUp = null;
+				((GameManager)GameManager.GM).UpdatePowerup (_playerIndex, null);
+			}
 		}
 	}
 

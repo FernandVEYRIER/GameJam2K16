@@ -53,8 +53,7 @@ public class MissileController : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Ground")
 		{
-            Debug.Log("hi");
-			//Instantiate (explosionPrefab, transform.position, Quaternion.identity);
+			Instantiate (explosionPrefab, transform.position, Quaternion.identity);
 			Destroy (gameObject);
 		}
 	}

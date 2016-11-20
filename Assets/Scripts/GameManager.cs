@@ -21,6 +21,7 @@ public class GameManager : AGameManager {
 	[SerializeField] private Image imageWin;
 	[SerializeField] private GameObject[] playerGUI;
 	[SerializeField] private Image[] imagePowerup;
+	[SerializeField] private Sprite defaultPowerUp;
 
 	[Header("Player")]
 	[SerializeField] private GameObject[] playerPrefabs;
@@ -144,6 +145,9 @@ public class GameManager : AGameManager {
 
 	public void UpdatePowerup(int playerID, Sprite sp)
 	{
-		imagePowerup [playerID].sprite = sp;
+		if (sp != null)
+			imagePowerup [playerID].sprite = sp;
+		else
+			imagePowerup [playerID].sprite = defaultPowerUp;
 	}
 }
