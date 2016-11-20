@@ -22,6 +22,7 @@ public class MapGenerator : MonoBehaviour {
 	private List<GameObject> _objects = new List<GameObject> ();
 	private AnimateSprite _animateSprite;
 	private float initVel;
+	[HideInInspector] public float endDist;
 
 	const float RATIO = 0.285f;
 
@@ -50,6 +51,13 @@ public class MapGenerator : MonoBehaviour {
 			{
 				if (g != null)
 					g.transform.position += g.transform.up * currVelocity;
+			}
+
+			// If the player reached the end
+			if (distance >= endDist)
+			{
+				distance = endDist;
+				GameManager.GM.EndGame ();
 			}
 		}
 	}

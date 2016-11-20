@@ -16,6 +16,7 @@ public class GameManager : AGameManager {
 	[SerializeField] private GameObject canvasPause;
 	[SerializeField] private GameObject canvasGame;
 	[SerializeField] private GameObject textCounter;
+	[SerializeField] private GameObject canvasEndGame;
 
 	[Header("Player")]
 	[SerializeField] private GameObject[] playerPrefabs;

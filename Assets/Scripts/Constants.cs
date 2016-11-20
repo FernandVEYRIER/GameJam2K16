@@ -20,6 +20,6 @@ namespace Assets.Scripts
 
 	public enum GameState
 	{
-		PAUSE, PLAY, WARMUP
+		PAUSE, PLAY, WARMUP, END
 	}
 }

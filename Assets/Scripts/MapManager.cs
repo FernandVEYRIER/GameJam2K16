@@ -10,6 +10,7 @@ public class MapManager : MonoBehaviour {
 	[SerializeField] private float startDist;
 	[SerializeField] private float velocity;
 	[SerializeField] private float scrollVelocity = 1;
+	[SerializeField] private float endDist = 1000f;
 
 	[Header("Objects")]
 	[SerializeField] private float minSpawnDelay = 2f;
@@ -20,6 +21,9 @@ public class MapManager : MonoBehaviour {
 	private Vector3[] vel;
 	private float currDelay;
 	private float distance = 0;
+
+	public float EndDistance
+	{ get{ return endDist; }}
 
 	// Use this for initialization
 	void Start () {
@@ -36,12 +40,15 @@ public class MapManager : MonoBehaviour {
 		}
 
 		foreach (MapGenerator m in spawners)
+		{
 			m.currVelocity = scrollVelocity;
+			m.endDist = endDist;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		for (int i = 0; i <sides.Length; ++i)
+		for (int i = 0; i < sides.Length; ++i)
 		{
 			sides [i].transform.position = Vector3.SmoothDamp (sides [i].transform.position, tr [i], ref vel[i], velocity);
 		}
