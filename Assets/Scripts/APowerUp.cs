@@ -7,6 +7,12 @@ public abstract class APowerUp : MonoBehaviour, IPowerUp {
 	[SerializeField] private int _remainingUsages;
 	private int _sender = -1;
 	private int _target = -1;
+	[SerializeField] private Sprite _sprite;
+
+//	void Awake()
+//	{
+//		_sprite = GetComponent<SpriteRenderer> ().sprite;
+//	}
 
 	public int Sender {
 		get {
@@ -24,6 +30,10 @@ public abstract class APowerUp : MonoBehaviour, IPowerUp {
 		set {
 			_target = (value < 0) ? -1 : value;
 		}
+	}
+
+	public Sprite sprite {
+		get { return _sprite; }
 	}
 
 	virtual public bool Use (Direction dir = Direction.TOP, int sender = -1, int target = -1)

@@ -31,9 +31,9 @@ public class MovePlayer : MonoBehaviour
             
             Transform current = TextBox[item.Key].GetChild(1);
             int len = current.childCount;
-            current.GetComponent<Text>().text = "Player " + (item.Key + 1) + "\n\t" + item.Value / 10 + "m";
+			current.GetComponent<Text>().text = "Player " + (item.Key + 1) + "\n\t" + (item.Value / 10).ToString("0.00") + "m";
             for (int i = 0; i < len; ++i)
-                current.GetChild(i).GetComponent<Text>().text = "Player " + (item.Key + 1) + "\n\t" + item.Value / 10 + "m";
+				current.GetChild(i).GetComponent<Text>().text = "Player " + (item.Key + 1) + "\n\t" + (item.Value / 10).ToString("0.00") + "m";
         }
     }
 }

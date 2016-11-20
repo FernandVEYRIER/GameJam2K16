@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 	private int _playerIndex = -1;
     private Direction _position;
 	private List<string> _moves = new List<string>() {"Up", "Right", "Down", "Left"};
-	private IPowerUp currPowerUp = null;
+	private APowerUp currPowerUp = null;
 
     public void shiftMoves(int shiftBy, bool counterClockwise = false)
     {
@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 		{
             Debug.Log("I am " + _playerIndex + " and I now have the powerup");
 			currPowerUp = col.GetComponent<APowerUp> ();
+			((GameManager)GameManager.GM).UpdatePowerup (PlayerIndex, currPowerUp.sprite);
 			Destroy (col.gameObject);
 		}
 		else if (col.tag == "Obstacle")
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
 		{
 			Debug.Log("I am " + _playerIndex + " and I now have the powerup");
 			currPowerUp = col.gameObject.GetComponent<APowerUp> ();
+			((GameManager)GameManager.GM).UpdatePowerup (PlayerIndex, currPowerUp.sprite);
 			Destroy (col.gameObject);
 		}
 		else if (col.gameObject.tag == "Obstacle")

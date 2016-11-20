@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\CanonManager.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\DetroyObj.cs" />
+     <Compile Include="Assets\Scripts\DoorController.cs" />
      <Compile Include="Assets\Scripts\Fading.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GamepadInput.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Scripts\MissileController.cs" />
      <Compile Include="Assets\Scripts\MovePlayer.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PowerUpDoor.cs" />
      <Compile Include="Assets\Scripts\PowerUpMissile.cs" />
      <Compile Include="Assets\Scripts\PowerUpReflector.cs" />
      <Compile Include="Assets\Scripts\PowerUpRotate.cs" />

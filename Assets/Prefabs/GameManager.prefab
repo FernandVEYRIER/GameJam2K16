@@ -222,6 +222,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  imagePowerup:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   playerPrefabs:
   - {fileID: 1000013075599804, guid: 31bf17a3cc121bc4fbaa08b4e880c038, type: 2}
   - {fileID: 1000011858095574, guid: bf1bf213ce4b1fd44848b3e53725dea8, type: 2}
@@ -235,3 +240,8 @@ MonoBehaviour:
   gravity: -300
   map: {fileID: 0}
   mapManager: {fileID: 0}
+  doors:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

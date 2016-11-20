@@ -20,6 +20,7 @@ public class GameManager : AGameManager {
 	[SerializeField] private Text[] textWin;
 	[SerializeField] private Image imageWin;
 	[SerializeField] private GameObject[] playerGUI;
+	[SerializeField] private Image[] imagePowerup;
 
 	[Header("Player")]
 	[SerializeField] private GameObject[] playerPrefabs;
@@ -140,4 +141,9 @@ public class GameManager : AGameManager {
     {
         doors[PlayerID].Close();
     }
+
+	public void UpdatePowerup(int playerID, Sprite sp)
+	{
+		imagePowerup [playerID].sprite = sp;
+	}
 }
