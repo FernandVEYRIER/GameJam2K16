@@ -61,9 +61,9 @@ public abstract class AGameManager : MonoBehaviour {
 		Time.timeScale = (_paused) ? 0 : 1;
 	}
 
-	public void EndGame()
+	virtual public void EndGame(int playerID)
 	{
-		Debug.Log ("Ended the game !");
+		Debug.Log ("Ended the game ! By " + playerID);
 		UpdateState (GameState.END);
 	}
 

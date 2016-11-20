@@ -17,6 +17,9 @@ public class GameManager : AGameManager {
 	[SerializeField] private GameObject canvasGame;
 	[SerializeField] private GameObject textCounter;
 	[SerializeField] private GameObject canvasEndGame;
+	[SerializeField] private Text[] textWin;
+	[SerializeField] private Image imageWin;
+	[SerializeField] private GameObject[] playerGUI;
 
 	[Header("Player")]
 	[SerializeField] private GameObject[] playerPrefabs;
@@ -35,6 +38,7 @@ public class GameManager : AGameManager {
         AS = GetComponent<AudioSource>();
 		canvasGame.SetActive (true);
 		canvasPause.SetActive (false);
+		canvasEndGame.SetActive (false);
 		base.Start ();
 
 		mapManager = GameObject.FindGameObjectWithTag ("MapManager").GetComponent<MapManager> ();
@@ -103,5 +107,28 @@ public class GameManager : AGameManager {
 	public void PlayerTakeDamage(int playerID)
 	{
 		mapManager.TakeSlow (playerID);
+	}
+
+	override public void EndGame(int playerID)
+	{
+		canvasGame.SetActive (false);
+		canvasEndGame.SetActive (true);
+		mapManager.ClearMaps ();
+
+		// Update the canvas according to the winner
+		Color[] colors = new Color[4];
+		colors [0] = playerGUI [playerID - 1].transform.GetChild (1).GetComponent<Text> ().color;
+		colors [1] = playerGUI [playerID - 1].transform.GetChild (1).GetChild(0).GetComponent<Text> ().color;
+		colors [2] = playerGUI [playerID - 1].transform.GetChild (1).GetChild(1).GetComponent<Text> ().color;
+		colors [3] = playerGUI [playerID - 1].transform.GetChild (1).GetChild(2).GetComponent<Text> ().color;
+
+		canvasEndGame.transform.GetChild(0).GetComponent<Image> ().color = playerGUI [playerID - 1].GetComponent<Image>().color;
+		for (int i = 0; i < textWin.Length; ++i)
+		{
+			textWin[i].text = "Player " + playerID + "\nwins !";
+			textWin [i].color = colors [i];
+		}
+		imageWin.sprite = playerGUI [playerID - 1].transform.GetChild(0).GetComponent<Image>().sprite;
+		base.EndGame (playerID);
 	}
 }

@@ -23,6 +23,7 @@ public class MapGenerator : MonoBehaviour {
 	private AnimateSprite _animateSprite;
 	private float initVel;
 	[HideInInspector] public float endDist;
+	[HideInInspector] public int id;
 
 	const float RATIO = 0.285f;
 
@@ -57,7 +58,7 @@ public class MapGenerator : MonoBehaviour {
 			if (distance >= endDist)
 			{
 				distance = endDist;
-				GameManager.GM.EndGame ();
+				GameManager.GM.EndGame (id);
 			}
 		}
 	}
@@ -97,5 +98,14 @@ public class MapGenerator : MonoBehaviour {
 		}
 
 		currVelocity = initVel;
+	}
+
+	public void ClearTerrain()
+	{
+		foreach (GameObject go in _objects)
+		{
+			Destroy (go);
+		}
+		terrainList.Clear ();
 	}
 }

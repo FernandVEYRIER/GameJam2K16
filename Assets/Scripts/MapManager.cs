@@ -39,10 +39,11 @@ public class MapManager : MonoBehaviour {
 			}
 		}
 
-		foreach (MapGenerator m in spawners)
+		for (int i = 0; i < spawners.Length; ++i)
 		{
-			m.currVelocity = scrollVelocity;
-			m.endDist = endDist;
+			spawners[i].currVelocity = scrollVelocity;
+			spawners[i].endDist = endDist;
+			spawners[i].id = i + 1;
 		}
 	}
 	
@@ -73,6 +74,14 @@ public class MapManager : MonoBehaviour {
 		foreach (MapGenerator m in spawners)
 		{
 			m.PushTerrain (new Obstacle((isWall) ? obstaclePrefab[Random.Range(0, obstaclePrefab.Length)] : powerupPrefabs[Random.Range(0, powerupPrefabs.Length)], distance));
+		}
+	}
+
+	public void ClearMaps()
+	{
+		foreach (MapGenerator m in spawners)
+		{
+			m.ClearTerrain ();
 		}
 	}
 
