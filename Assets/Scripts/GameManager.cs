@@ -30,7 +30,11 @@ public class GameManager : AGameManager {
 	[SerializeField] private RotateMap map;
 	[SerializeField] private MapManager mapManager;
 
-	private PlayerController[] playerControllers = new PlayerController[Constants.NB_MAX_PLAYERS];
+    [Header("Door")]
+    [SerializeField]
+    private DoorController[] doors;
+
+    private PlayerController[] playerControllers = new PlayerController[Constants.NB_MAX_PLAYERS];
     
 	// Use this for initialization
 	override public void Start ()
@@ -131,4 +135,9 @@ public class GameManager : AGameManager {
 		imageWin.sprite = playerGUI [playerID - 1].transform.GetChild(0).GetComponent<Image>().sprite;
 		base.EndGame (playerID);
 	}
+
+    public void CloseDoor(int PlayerID)
+    {
+        doors[PlayerID].Close();
+    }
 }

@@ -21,8 +21,8 @@ GameObject:
   - 4: {fileID: 4000011675584616}
   - 212: {fileID: 212000014058469638}
   - 50: {fileID: 50000012836315162}
-  - 114: {fileID: 114000013052437190}
   - 60: {fileID: 60000012232231020}
+  - 114: {fileID: 114000013712535926}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: PowerUp
@@ -100,7 +100,7 @@ PolygonCollider2D:
     - - {x: 2.9, y: -4}
       - {x: 3.766667, y: -3.6666667}
       - {x: 3.5934737, y: -4.2398586}
---- !u!114 &114000013052437190
+--- !u!114 &114000013712535926
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,12 +108,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010323259566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd53d2bd02cc2b244bab2688301c2646, type: 3}
+  m_Script: {fileID: 11500000, guid: 489a97d68a31fc34f97ac75cfae86db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _remainingUsages: 1
-  missilePrefab: {fileID: 1000011140562258, guid: 9a4f0cc8716e58146995f5aa134e9178,
-    type: 2}
 --- !u!212 &212000014058469638
 SpriteRenderer:
   m_ObjectHideFlags: 1
