@@ -70,6 +70,7 @@ public class GamepadInput : MonoBehaviour {
         {
             Debug.Log("P" + index + "ButtonA Hello!");
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.DOWN);
+
 			if (GameManager.GM.State == GameState.END)
 				GameManager.GM.LoadLevel (0);
         }
@@ -77,19 +78,29 @@ public class GamepadInput : MonoBehaviour {
         {
             Debug.Log("P" + index + "ButtonB Hello!");
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.RIGHT);
+
+			if (GameManager.GM.State == GameState.END)
+				GameManager.GM.LoadLevel (0);
         }
         if (Input.GetButtonDown("P" + index + "ButtonX"))
         {
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.LEFT);
+
+			if (GameManager.GM.State == GameState.END)
+				GameManager.GM.LoadLevel (0);
         }
         if (Input.GetButtonDown("P" + index + "ButtonY"))
         {
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.TOP);
+
+			if (GameManager.GM.State == GameState.END)
+				GameManager.GM.LoadLevel (0);
         }
         if (Input.GetButtonDown("P" + index + "ButtonPause"))
         {
             Debug.Log("GamePause");
-            GameManager.GM.SetPause();
+			if (GameManager.GM.State == GameState.PAUSE || GameManager.GM.State == GameState.PLAY)
+            	GameManager.GM.SetPause();
         }
     }
 
