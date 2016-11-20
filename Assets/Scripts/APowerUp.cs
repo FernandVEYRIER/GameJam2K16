@@ -7,14 +7,15 @@ public abstract class APowerUp : MonoBehaviour, IPowerUp {
 	[SerializeField] private int _remainingUsages;
 	private int _sender = -1;
 	private int _target = -1;
-	[SerializeField] private Sprite _sprite;
+	//[SerializeField]
+    private Sprite _sprite;
 
-//	void Awake()
-//	{
-//		_sprite = GetComponent<SpriteRenderer> ().sprite;
-//	}
+    void Awake()
+    {
+        _sprite = GetComponent<SpriteRenderer>().sprite;
+    }
 
-	public int Sender {
+    public int Sender {
 		get {
 			return _sender;
 		}

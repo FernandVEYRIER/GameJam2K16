@@ -116,7 +116,7 @@ public class GameManager : AGameManager {
 
 	override public void EndGame(int playerID)
 	{
-		canvasGame.SetActive (false);
+		// canvasGame.SetActive (false);
 		canvasEndGame.SetActive (true);
 		mapManager.ClearMaps ();
 
