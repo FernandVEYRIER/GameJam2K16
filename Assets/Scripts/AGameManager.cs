@@ -63,7 +63,6 @@ public abstract class AGameManager : MonoBehaviour {
 
 	virtual public void EndGame(int playerID)
 	{
-		Debug.Log ("Ended the game ! By " + playerID);
 		UpdateState (GameState.END);
 	}
 

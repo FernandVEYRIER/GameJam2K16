@@ -19,7 +19,6 @@ public class GamepadInput : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			Debug.Log ("Get input space. Grounded ? " + playerCharacter.Grounded);
             if (playerCharacter.Grounded)
             {
                 playerCharacter.Grounded = false;
@@ -29,21 +28,25 @@ public class GamepadInput : MonoBehaviour {
         /////////////////////// AXES ////////////////////////////////
         if (Input.GetAxis("P" + index + "LeftHorizontal") > 0.4)
         {
-            jump("Right");
+			if (GameManager.GM.State == GameState.PLAY)
+            	jump("Right");
         }
         else if (Input.GetAxis("P" + index + "LeftHorizontal") < -0.4)
         {
-            jump("Left");
+			if (GameManager.GM.State == GameState.PLAY)
+            	jump("Left");
         }
 
         if (Input.GetAxis("P" + index + "LeftVertical") > 0.4)
         {
             Debug.Log("current index:" + index);
-            jump("Up");
+			if (GameManager.GM.State == GameState.PLAY)
+            	jump("Up");
         }
         else if (Input.GetAxis("P" + index + "LeftVertical") < -0.4)
         {
-            jump("Down");
+			if (GameManager.GM.State == GameState.PLAY)
+            	jump("Down");
         }
 
         if (Input.GetAxis("P" + index + "RightHorizontal") > 0)

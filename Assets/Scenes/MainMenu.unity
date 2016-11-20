@@ -708,10 +708,10 @@ RectTransform:
   - {fileID: 1713628519}
   m_Father: {fileID: 271305746}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1}
-  m_SizeDelta: {x: 209, y: 211}
+  m_AnchorMin: {x: 0.3633475, y: 0.245}
+  m_AnchorMax: {x: 0.643, y: 0.75000006}
+  m_AnchoredPosition: {x: -2.5, y: 0}
+  m_SizeDelta: {x: -2, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661954133
 MonoBehaviour:
@@ -813,8 +813,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bordeaux Game Jam #4 made by :\n\nJustine D\xE9sir\xE9 - Graphist\nNicolas
-    Constanty - Programmer\nTom Solacroup - Programmer\nFernand Veyrier - Programmer"
+  m_Text: 'Bordeaux Game Jam #4 made by :
+
+
+    Justine Desire - Graphist
+
+    Nicolas Constanty - Programmer
+
+    Tom Solacroup - Programmer
+
+    Fernand Veyrier - Programmer'
 --- !u!222 &1713628521
 CanvasRenderer:
   m_ObjectHideFlags: 0

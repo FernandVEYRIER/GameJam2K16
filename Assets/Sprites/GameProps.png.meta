@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 031fcfcbc5ca1b4418386c3af39220e2
-timeCreated: 1479060594
+timeCreated: 1479664761
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,8 @@ TextureImporter:
     21300018: GameProps_9
     21300020: GameProps_10
     21300022: GameProps_11
+    21300024: GameProps_12
+    21300026: GameProps_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -215,6 +217,32 @@ TextureImporter:
         y: 1510
         width: 71
         height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GameProps_12
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 870
+        width: 242
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GameProps_13
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 751
+        width: 511
+        height: 522
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

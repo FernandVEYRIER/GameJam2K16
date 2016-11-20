@@ -13,3 +13,4 @@ public class HandleGui : MonoBehaviour {
             map.rotate(RotateMap.State.right);
     }
 }
+
