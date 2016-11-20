@@ -70,6 +70,8 @@ public class GamepadInput : MonoBehaviour {
         {
             Debug.Log("P" + index + "ButtonA Hello!");
             playerCharacter.UsePowerUp(Assets.Scripts.Direction.DOWN);
+			if (GameManager.GM.State == GameState.END)
+				GameManager.GM.LoadLevel (0);
         }
         if (Input.GetButtonDown("P" + index + "ButtonB"))
         {
