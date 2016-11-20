@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _remainingUsages: 1
+  _sprite: {fileID: 21300000, guid: 0507240c38f49ad43a05d2a664f425dc, type: 3}
 --- !u!212 &212000010474656206
 SpriteRenderer:
   m_ObjectHideFlags: 1

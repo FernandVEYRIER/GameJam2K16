@@ -7,9 +7,9 @@ public class HandleGui : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetAxis("Horizontal") < 0)
+		if (Input.GetAxis("P0LeftHorizontal") < 0)
             map.rotate(RotateMap.State.left);
-        else if (Input.GetAxis("Horizontal") > 0)
+		else if (Input.GetAxis("P0LeftHorizontal") > 0)
             map.rotate(RotateMap.State.right);
     }
 }

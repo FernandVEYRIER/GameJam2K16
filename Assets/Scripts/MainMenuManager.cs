@@ -26,18 +26,19 @@ public class MainMenuManager : AGameManager {
     override public void Update()
     {
         base.Update();
-        float axis = Input.GetAxis("Horizontal");
-        if (Input.GetAxis("Submit") != 0 && !selected && current == 3)
+        float axis = Input.GetAxis("P0LeftHorizontal");
+
+        if (Input.GetAxis("P0ButtonA") != 0 && !selected && current == 3)
         {
             selected = true;
             LoadLevel(1);
         }
-		else if (Input.GetAxis("Submit") != 0 && !selected && current == 2)
+		else if (Input.GetAxis("P0ButtonA") != 0 && !selected && current == 2)
 		{
 			selected = true;
 			ShowCredits ();
 		}
-		else if (Input.GetAxis("Submit") != 0 && !selected && current == 1)
+		else if (Input.GetAxis("P0ButtonA") != 0 && !selected && current == 1)
 		{
 			selected = true;
 			OnQuit ();
