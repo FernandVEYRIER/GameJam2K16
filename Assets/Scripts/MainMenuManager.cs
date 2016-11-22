@@ -9,6 +9,8 @@ public class MainMenuManager : AGameManager {
     public GameObject[] buttons;
     private int current;
     private bool selected;
+    private bool isselect;
+    private bool cred;
     private Color grey = new Color(0.9f, 0.9f, 0.9f);
     public RotateMap map = null;
 
@@ -18,6 +20,8 @@ public class MainMenuManager : AGameManager {
 		credits.SetActive (false);
         current = 0;
         selected = false;
+        isselect = false;
+        cred = false;
         if (!map)
             map = Camera.main.GetComponent<RotateMap>();
         InvokeRepeating("Selected", 0, 0.5f);
@@ -28,58 +32,70 @@ public class MainMenuManager : AGameManager {
         base.Update();
         float axis = Input.GetAxis("P0LeftHorizontal");
 
-        if (Input.GetAxis("P0ButtonA") != 0 && !selected && current == 3)
+        if (!selected && Input.GetAxis("P0ButtonA") != 0 && current == 3)
         {
             selected = true;
             LoadLevel(1);
         }
-		else if (Input.GetAxis("P0ButtonA") != 0 && !selected && current == 2)
+		else if (!selected && Input.GetAxis("P0ButtonA") != 0 && current == 2)
 		{
 			selected = true;
 			ShowCredits ();
+            cred = !cred;
 		}
-		else if (Input.GetAxis("P0ButtonA") != 0 && !selected && current == 1)
+		else if (!selected && Input.GetAxis("P0ButtonA") != 0 && current == 1)
 		{
 			selected = true;
 			OnQuit ();
 		}
-        else if (map.getState() == RotateMap.State.none)
+        else if (!selected && axis != 0 && map.getState() == RotateMap.State.none)
         {
+            if (cred)
+            {
+                ShowCredits();
+                cred = false;
+            }
             if (axis > 0)
+            {
+                map.rotate(RotateMap.State.left);
                 Previous();
+            }    
             else if (axis < 0)
+            {
+                map.rotate(RotateMap.State.right);
                 Next();
+            }    
+            selected = true;
         }
-        else
+        else if (selected && axis == 0 && Input.GetAxis("P0ButtonA") == 0)
             selected = false;
     }
 
     void Previous()
     {
         buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
-        --current;
-        if (current < 0)
-            current = buttons.Length - 1;
-    }
-
-    void Next()
-    {
-        buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
         ++current;
         if (current >= buttons.Length)
             current = 0;
     }
+    void Next()
+    {
+        buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
+        --current;
+        if (current < 0)
+            current = buttons.Length - 1;   
+    }
 
     void Selected()
     {
-        if (selected)
+        if (isselect)
         {
-            selected = false;
+            isselect = false;
             buttons[current].GetComponent<SpriteRenderer>().material.color = Color.white;
         }
         else
         {
-            selected = true;
+            isselect = true;
             buttons[current].GetComponent<SpriteRenderer>().material.color = grey;
         }
     }
